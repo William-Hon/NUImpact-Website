@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+/* nav bar height so hero section starts right under navbar */
+:root {
+  --nav-h: 80px;
+  --color-nuimpact-blue: #4660aa;
+  --color-nuimpact-yellow: #fad06e;
+  --color-nuimpact-red: #de514a;
+}

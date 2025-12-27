@@ -2,7 +2,7 @@ import React from "react";
 
 const PortfolioPreviewSection = () => {
   return (
-    <div className="relative h-screen bg-cover bg-center">
+    <div className="relative min-h-screen  flex items-center bg-cover bg-center">
       {/* VIDEO */}
       <video
         autoPlay
@@ -26,7 +26,7 @@ const PortfolioPreviewSection = () => {
         </h1>
 
         {/* SPLIT CONTENT UNDER TITLE */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 py-16 flex-1">
+        <div className="grid grid-cols-1 lg:grid-cols-2 py-16 flex-1 gap-8">
           {/* LEFT */}
           <div className="flex flex-col items-center justify-center gap-8">
             <h2 className="text-center text-3xl font-light">

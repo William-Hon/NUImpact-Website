@@ -3,7 +3,13 @@
 /* nav bar height so hero section starts right under navbar */
 :root {
   --nav-h: 80px;
+  --color-nuimpact-gray: #767676;
   --color-nuimpact-blue: #4660aa;
+  --color-nuimpact-red: #b13a34;
   --color-nuimpact-yellow: #fad06e;
-  --color-nuimpact-red: #de514a;
+
+  --color-nuimpact-dark-blue: #2f3f8f;
+  --color-nuimpact-dark-gray: #333333;
+  --color-nuimpact-dark-yellow: #a17800;
+
 }

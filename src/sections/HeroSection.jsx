@@ -21,11 +21,11 @@ const Hero = ({
       {/* Content */}
       <div
         className={`relative z-10 h-full pt-[var(--nav-h)] flex ${isHome
-            ? "items-center justify-center text-center"
-            : "items-center justify-start px-16 text-left"
+          ? "items-center justify-center text-center"
+          : "items-center justify-start px-16 text-left"
           }`}
       >
-        <div className={`flex flex-col space-y-4 w-[50vw] max-w-1xl`}>
+        <div className={`flex flex-col space-y-4 w-[60vw] max-w-1xl`}>
           <h1 className="text-white text-8xl font-bold">{title}</h1>
           {subtitle && (
             <h2 className="text-white text-4xl font-semibold">{subtitle}</h2>

@@ -1,5 +1,5 @@
 import HeroSection from "../sections/HeroSection.jsx";
-import ImageSliderSection from "../sections/ImageSliderSection.jsx";
+import ImageSlider from "../components/ImageSlider.jsx";
 import StatisticsSection from "../sections/StatisticsSection.jsx";
 import PortfolioPreviewSection from "../sections/PortfolioPreviewSection.jsx";
 import GetInvolvedSection from "../sections/GetInvolvedSection.jsx";
@@ -11,20 +11,20 @@ const HomePage = () => {
     "/assets/images/students.png",
     "/assets/images/nusis-presentation.png",
     "/assets/images/nuimpact-team-alt.png",
-    "/assets/images/nuimpact-nusis-full-group.png",
+    "/assets/images/nusis-full-group.png",
     "/assets/images/nuimpact-guy-talking.png",
     "/assets/images/nuimpact-irm-presentation.png",
     "/assets/images/nuimpact-fund-meeting.png"];
   return (
-    <div className="space-y-4">
+    <div className="">
       <HeroSection
         variant="home"
         title="NUImpact"
         subtitle="Northeastern University's Impact Investing Initiative"
         backgroundImage="/assets/images/water.jpg" />
-      <ImageSliderSection
-      images={scrollImages}
-      mode="auto"
+      <ImageSlider
+        images={scrollImages}
+        mode="auto"
       />
       <StatisticsSection />
       <PortfolioPreviewSection />

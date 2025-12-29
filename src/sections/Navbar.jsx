@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ logoColor }) => {
   const [onHero, setOnHero] = useState(true);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const Navbar = () => {
 
             <NavLink className="flex flex-shrink-0 items-center mr-2" to="/">
               <img className="h-10 w-auto" src="/assets/images/nuimpact-logo.png" alt="NUImpact Logo" />
-              <span className="hidden md:block text-white text-2xl font-bold ml-2">
+              <span className={`hidden md:block text-2xl font-bold ml-2 ${logoColor === 'black' ? 'text-black' : 'text-white'}`}>
                 NUImpact
               </span>
             </NavLink>

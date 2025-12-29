@@ -22,14 +22,13 @@ const investments = [
             websiteLink: "https://eatwellmealkits.com"
         },
         description: [
-            "During Spring 2019, NUImpact officially closed on its first investment of $25,000 in Boston-based company EatWell, which prepares nutritious, affordable, and culturally-appropriate food preparation meal kits for food-insecure families.",
-            "40 million United States residents, including up to 10% of Bostonians, lack access to affordable and healthy food options. Generations of food apartheid--crafted by racist policy--have devastated communities across the country, especially communities of color."
+            "During Spring 2019, NUImpact officially closed on its first investment of $25,000 in Boston-based company EatWell, which prepares nutritious, affordable, and culturally-appropriate food preparation meal kits for food-insecure families."
         ],
         testimonial: {
             quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex",
-            author: "James Joe",
+            author: "Dan Wexler",
             role: "CEO / EatWell",
-            avatar: "/assets/images/james-joe.png"
+            avatar: "/assets/images/portfolio-images/dan-wexler.jpg"
         }
     },
     {
@@ -54,14 +53,14 @@ const investments = [
             websiteLink: "#"
         },
         description: [
-            "Unicorn was founded with the purpose of ensuring democratized access to high-quality, sustainable, and socially conscious menstrual hygiene products. Unicorn focuses its operations on three pillars: producing products that are better for the consumer, better for the environment, and better for the communities in which they operate.",
-            "They produce 100% organic tampons and pads that are highly absorbent and naturally hypoallergenic. All Unicorn products are plant-based, eco-friendly, and free of chemicals and dyes that are both harmful to the environment and to our health."
+            "Unicorn was founded with the purpose of ensuring democratized access to high-quality, sustainable, and socially conscious menstrual hygiene products.",
+            "They produce 100% organic tampons and pads that are naturally hypoallergenic. Unicorn products are plant-based, eco-friendly, and free of chemicals and dyes that are both harmful to the environment and to our health."
         ],
         testimonial: {
             quote: "Empowering women with sustainable, high-quality menstrual products while fighting period poverty.",
-            author: "Founder",
+            author: "Thyme Sullivan",
             role: "CEO / Unicorn",
-            avatar: "/assets/images/default-avatar.png"
+            avatar: "/assets/images/portfolio-images/thyme-sullivan.jpg"
         }
     },
     {
@@ -91,9 +90,9 @@ const investments = [
         ],
         testimonial: {
             quote: "NUImpact's support was critical in our early stages, providing not just capital but a network of passionate students and experts.",
-            author: "Tiya Gordon",
+            author: "Nathan King",
             role: "Co-Founder",
-            avatar: "/assets/images/tiya-avatar.png"
+            avatar: "/assets/images/portfolio-images/nathan-king.jpg"
         }
     },
     {
@@ -123,9 +122,9 @@ const investments = [
         ],
         testimonial: {
             quote: "Building a worker-owned asset that nourishes, employs, and reinvests in the local community.",
-            author: "Board Member",
+            author: "Alyssa Melendez",
             role: "Dorchester Food Co-op",
-            avatar: "/assets/images/default-avatar.png"
+            avatar: "/assets/images/portfolio-images/alyssa-melendez.jpg"
         }
     },
     {
@@ -155,9 +154,9 @@ const investments = [
         ],
         testimonial: {
             quote: "Providing the most effective post-stroke hand rehab straight from your home through robotics.",
-            author: "Founder",
+            author: "Chris Dugan",
             role: "CEO / Imago Rehab",
-            avatar: "/assets/images/default-avatar.png"
+            avatar: "/assets/images/portfolio-images/chris-dugan.jpg"
         }
     },
     {
@@ -182,14 +181,14 @@ const investments = [
             websiteLink: "#"
         },
         description: [
-            "AGRI-TRAK is a purpose-driven agricultural technology company transforming how farmers manage their operations through an innovative precision agriculture platform.",
+            "AGRI-TRAK is a purpose-driven agricultural technology company transforming how farmers manage their operations through an innovative agriculture platform.",
             "Their software and data solutions create a comprehensive farm management environment that empowers growers to make data-informed decisions and optimize their yields."
         ],
         testimonial: {
             quote: "Redefining what modern farm management looks like and feels like through collaboration.",
-            author: "Founder",
+            author: "Jamie Sonneville",
             role: "CEO / Agri-Trak",
-            avatar: "/assets/images/default-avatar.png"
+            avatar: "/assets/images/portfolio-images/jamie-sonneville.jpg"
         }
     },
     {
@@ -219,9 +218,9 @@ const investments = [
         ],
         testimonial: {
             quote: "Revolutionizing how patients and providers connect by advancing accessibility in healthcare.",
-            author: "Founder",
+            author: "Dr. Tsikata Apenyo",
             role: "CEO / Volta Health",
-            avatar: "/assets/images/default-avatar.png"
+            avatar: "/assets/images/portfolio-images/tsikata-apenyo.jpg"
         }
     },
 ];

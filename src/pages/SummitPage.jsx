@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import SummitHeroSection from '../sections/SummitHeroSection';
+import SummitOverviewSection from '../sections/SummitOverviewSection';
+import SummitComingSoonSection from '../sections/SummitComingSoonSection';
+import SummitFAQSection from '../sections/SummitFAQSection';
+import Footer from '../sections/Footer';
 
 const SummitPage = () => {
-  return (
-    <div>SummitPage</div>
-  )
-}
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-export default SummitPage
+  return (
+    <div className="min-h-screen bg-white">
+      <SummitHeroSection />
+      <SummitOverviewSection />
+      <SummitComingSoonSection />
+      <SummitFAQSection />
+      <Footer />
+    </div>
+  );
+};
+
+export default SummitPage;

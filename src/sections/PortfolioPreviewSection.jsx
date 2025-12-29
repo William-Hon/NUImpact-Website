@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PortfolioPreviewSection = () => {
   return (
@@ -34,7 +35,8 @@ const PortfolioPreviewSection = () => {
               Northeast region.
             </h2>
 
-            <button
+            <Link
+              to="/portfolio"
               className="
               flex items-center gap-3 px-8 py-4
               text-white text-lg font-medium
@@ -46,7 +48,7 @@ const PortfolioPreviewSection = () => {
             >
               Check out our latest investment!
               <span className="text-xl">→</span>
-            </button>
+            </Link>
           </div>
 
           {/* RIGHT */}

@@ -53,7 +53,7 @@ export default function FlowerCircles({ values }) {
                     >
                         <div>
 
-                            <p className="mt-2 text-sm text-white">
+                            <p className="mt-2 text-md font-semibold text-white">
                                 {values.text}
                             </p>
                         </div>
@@ -63,35 +63,35 @@ export default function FlowerCircles({ values }) {
 
             {/* TOP LABEL */}
             <div className="absolute -top-25 left-1/2 -translate-x-1/2 text-center">
-                <p className="text-4xl font-medium text-white">
+                <p className="text-4xl font-bold text-[var(--color-nuimpact-dark-blue)]">
                     Inclusivity
                 </p>
             </div>
 
             {/* LEFT LABEL */}
             <div className="absolute top-[25%] -left-55 text-right">
-                <p className="text-4xl font-medium text-white">
+                <p className="text-4xl font-bold text-[var(--color-nuimpact-dark-blue)]">
                     Empathy
                 </p>
             </div>
 
             {/* RIGHT LABEL */}
             <div className="absolute top-[25%] -right-55 text-left">
-                <p className="text-4xl font-medium text-white">
+                <p className="text-4xl font-bold text-[var(--color-nuimpact-dark-blue)]">
                     Humility
                 </p>
             </div>
 
             {/* BOTTOM LEFT LABEL */}
             <div className="absolute top-[95%] right-[105%] text-center">
-                <p className="text-4xl font-medium text-white">
+                <p className="text-4xl font-bold text-[var(--color-nuimpact-dark-blue)]">
                     Community
                 </p>
             </div>
 
             {/* BOTTOM RIGHT LABEL */}
             <div className="absolute top-[95%] left-[105%] text-center">
-                <p className="text-4xl font-medium text-white">
+                <p className="text-4xl font-bold text-[var(--color-nuimpact-dark-blue)]">
                     Intention
                 </p>
             </div>

@@ -9,7 +9,7 @@ const InvestmentCriteriaSection = () => {
                     <div className="lg:col-span-7 space-y-6">
                         <div className="mb-8">
                             <h2 className="text-4xl font-bold mb-4 text-[var(--color-nuimpact-blue)]">What We Look For</h2>
-                            <div className="h-1 w-24 bg-[var(--color-nuimpact-blue)] rounded-full"></div>
+                            <div className="h-1 w-24 bg-[var(--color-nuimpact-blue)]"></div>
                         </div>
 
                         <div className="space-y-3">
@@ -37,7 +37,7 @@ const InvestmentCriteriaSection = () => {
                             ].map((item, index) => (
                                 <div
                                     key={index}
-                                    className="group p-6 rounded-2xl bg-gray-300 border border-gray-100 hover:border-[var(--color-nuimpact-blue)]/30 hover:bg-white transition-all duration-300 hover:shadow-xl flex items-center gap-6"
+                                    className="group p-6 bg-gray-300 border border-gray-100 hover:border-[var(--color-nuimpact-blue)]/30 hover:bg-white transition-all duration-300 hover:shadow-xl flex items-center gap-6"
                                 >
                                     <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center text-4xl text-[var(--color-nuimpact-blue)] group-hover:scale-110 transition-transform">
                                         {item.icon}
@@ -54,7 +54,7 @@ const InvestmentCriteriaSection = () => {
 
                     {/* Image (Right Side, 5 columns) */}
                     <div className="lg:col-span-5 relative group">
-                        <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl border border-gray-200 h-full">
+                        <div className="relative aspect-[4/5] overflow-hidden shadow-2xl border border-gray-200 h-full">
                             <img
                                 src="/assets/images/nusis-workshop.png"
                                 alt="NUImpact Evaluation"

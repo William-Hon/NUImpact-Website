@@ -8,7 +8,7 @@ import Footer from "../sections/Footer.jsx";
 
 const HomePage = () => {
   const scrollImages = [
-    "/assets/images/students.png",
+    "/assets/images/student.png",
     "/assets/images/nusis-presentation.png",
     "/assets/images/nuimpact-team-alt.png",
     "/assets/images/nusis-full-group.png",
@@ -25,6 +25,8 @@ const HomePage = () => {
       <ImageSlider
         images={scrollImages}
         mode="auto"
+        gap="gap-2"
+        padding="py-2"
       />
       <StatisticsSection />
       <PortfolioPreviewSection />

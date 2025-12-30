@@ -7,9 +7,12 @@ const investments = [
         position: 0.1,
         labelPosition: "bottom",
 
+        // Portfolio preview card color
+        cardColor: "var(--color-eatwell-preview-card)",
+
         // Portfolio Showcase Data
         showInSlider: true,
-        backgroundColor: "var(--color-eatwell-bg)", // Light sage green
+        backgroundColor: "var(--color-eatwell-bg)",
         headerColor: "var(--color-eatwell-header-text)",
         regularTextColor: "var(--color-eatwell-regular-text)",
         logo: "/assets/images/portfolio-images/eat-well-logo.png",
@@ -38,6 +41,10 @@ const investments = [
         color: "var(--color-nuimpact-red)",
         position: 0.3,
         labelPosition: "top",
+
+        // Portfolio preview card color
+        cardColor: "var(--color-unicorn-preview-card)",
+
         // Portfolio Showcase Data
         showInSlider: true,
         backgroundColor: "var(--color-unicorn-bg)",
@@ -70,6 +77,10 @@ const investments = [
         color: "var(--color-nuimpact-blue)",
         position: 0.48,
         labelPosition: "top",
+
+        // Portfolio preview card color
+        cardColor: "var(--color-its-electric-preview-card)",
+
         // Portfolio Showcase Data
         showInSlider: true,
         backgroundColor: "var(--color-its-electric-bg)", // Dark blue/gray
@@ -102,6 +113,10 @@ const investments = [
         color: "var(--color-nuimpact-light-blue)",
         position: 0.5,
         labelPosition: "bottom",
+
+        // Portfolio preview card color
+        cardColor: "var(--color-dorchester-preview-card)",
+
         // Portfolio Showcase Data
         showInSlider: true,
         backgroundColor: "var(--color-dorchester-bg)",
@@ -134,6 +149,10 @@ const investments = [
         color: "var(--color-imago-powder-blue)",
         position: 0.52,
         labelPosition: "top",
+
+        // Portfolio preview card color
+        cardColor: "var(--color-imago-powder-preview-card)",
+
         // Portfolio Showcase Data
         showInSlider: true,
         backgroundColor: "var(--color-imago-powder-bg)",
@@ -166,6 +185,10 @@ const investments = [
         color: "var(--color-nuimpact-blue)",
         position: 0.85,
         labelPosition: "top",
+
+        // Portfolio preview card color
+        cardColor: "var(--color-agritrak-preview-card)",
+
         // Portfolio Showcase Data
         showInSlider: true,
         backgroundColor: "var(--color-agritrak-bg)",
@@ -198,6 +221,10 @@ const investments = [
         color: "var(--color-nuimpact-blue)",
         position: 0.87,
         labelPosition: "bottom",
+
+        // Portfolio preview card color
+        cardColor: "var(--color-volta-preview-card)",
+
         // Portfolio Showcase Data
         showInSlider: true,
         backgroundColor: "var(--color-volta-bg)",

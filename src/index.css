@@ -19,30 +19,37 @@
 
   /* portfolio colors */
   --color-eatwell-bg: #dceec4;
+  --color-eatwell-preview-card: #404A31;
   --color-eatwell-header-text: #000000;
   --color-eatwell-regular-text: #000000;
 
   --color-unicorn-bg: #2f3957;
+  --color-unicorn-preview-card: #d75887;
   --color-unicorn-header-text: #d75887;
   --color-unicorn-regular-text: #ffffff;
 
   --color-its-electric-bg: #7a2252;
+  --color-its-electric-preview-card: #eb873d;
   --color-its-electric-header-text: #eb873d;
   --color-its-electric-regular-text: #ffffff;
 
   --color-dorchester-bg: #ffffff;
+  --color-dorchester-preview-card: #057b3e;
   --color-dorchester-header-text: #057b3e;
   --color-dorchester-regular-text: #000000;
 
   --color-imago-powder-bg: #e3e7f2;
+  --color-imago-powder-preview-card: #2c46a8;
   --color-imago-powder-header-text: #2c46a8;
   --color-imago-powder-regular-text: #000000;
 
   --color-agritrak-bg: #ffdad9;
+  --color-agritrak-preview-card: #de514a;
   --color-agritrak-header-text: #de514a;
   --color-agritrak-regular-text: #000000;
 
   --color-volta-bg: #16172e;
+  --color-volta-preview-card: #16172e;
   --color-volta-header-text: #116fcf;
   --color-volta-regular-text: #ffffff;
 }

@@ -30,7 +30,7 @@ const PortfolioSlider = ({ investments }) => {
                 {/* Left Peek/Arrow */}
                 <div className="hidden lg:flex items-center gap-2 flex-1 justify-end max-w-[150px] xl:max-w-[300px]">
                     <div
-                        className="w-full h-[540px] rounded-r-3xl opacity-40 blur-[1px] shadow-sm transform -translate-x-1/4"
+                        className="w-full h-[540px] blur-[1px] shadow-sm transform -translate-x-1/4"
                         style={{ backgroundColor: prevCompany.backgroundColor }}
                     />
                     <button
@@ -77,7 +77,7 @@ const PortfolioSlider = ({ investments }) => {
                         <FaChevronRight size={24} />
                     </button>
                     <div
-                        className="w-full h-[540px] rounded-l-3xl opacity-40 blur-[1px] shadow-sm transform translate-x-1/4"
+                        className="w-full h-[540px] blur-[1px] shadow-sm transform translate-x-1/4"
                         style={{ backgroundColor: nextCompany.backgroundColor }}
                     />
                 </div>

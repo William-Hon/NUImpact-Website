@@ -52,8 +52,8 @@ const TeamMemberSection = () => {
         <div className="container mx-auto px-4 py-12">
             {/* Page Header */}
             <div className="mb-12">
-                <h1 className="text-5xl font-bold mb-4">People</h1>
-                <p className="text-xl text-gray-600 max-w-3xl">
+                <h1 className="text-5xl font-bold mb-4 text-[var(--color-nuimpact-dark-blue)]">People</h1>
+                <p className="text-xl text-[var(--color-nuimpact-dark-blue)] max-w-3xl">
                     Our team of dedicated Northeastern University students bring together NUImpact’s impact investing approach and diverse industry experience to help mission-driven companies amplify their impact.
                 </p>
             </div>
@@ -65,7 +65,7 @@ const TeamMemberSection = () => {
                     <div className="flex justify-end mb-4">
                         <button
                             onClick={handleCollapseAll}
-                            className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-gray-200"
+                            className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2  text-sm font-medium transition-colors border border-gray-200"
                         >
                             Collapse All
                         </button>
@@ -136,7 +136,7 @@ const TeamMemberSection = () => {
                                     key={cat}
                                     onClick={() => setSelectedTeam(cat)}
                                     className={`px-4 py-2 rounded-full text-left transition-colors ${selectedTeam === cat
-                                        ? "bg-blue-600 text-white font-medium"
+                                        ? "bg-[var(--color-nuimpact-blue)] text-white font-medium"
                                         : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                                         }`}
                                 >

@@ -9,6 +9,7 @@ const ImageSliderSection = ({
   step = 300,           // manual scroll step
   height = "h-64",
   gap = "gap-0",        // Customizable gap (default: no gap)
+  padding = "py-0",     // Top/bottom padding
   textColor = "text-white",
   objectFit = "object-cover"
 }) => {
@@ -67,7 +68,7 @@ const ImageSliderSection = ({
     mode === "auto" ? [...sliderItems, ...sliderItems] : sliderItems;
 
   return (
-    <div className="relative w-full ">
+    <div className={`relative w-full ${padding}`}>
       {/* Container for everything to manage positioning */}
       <div className="relative">
         {/* MANUAL CONTROLS - Positioned relative to the image area */}

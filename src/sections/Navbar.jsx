@@ -14,13 +14,13 @@ const Navbar = ({ logoColor }) => {
   }, []);
 
   const linkClass = ({ isActive }) =>
-    `px-2 py-1.5 text-black transition hover:opacity-80 ${isActive ? "font-semibold" : ""
+    `px-4 py-2 text-xl font-medium text-white transition hover:opacity-80 ${isActive ? "font-bold" : ""
     }`;
 
   return (
     <nav
       className={`fixed top-0 py-4 w-full z-50 transition-colors duration-300 ${onHero
-        ? "bg-white/35 backdrop-blur-[2px] backdrop-saturate-125 border-b border-white/15"
+        ? "bg-black/25 backdrop-blur-[2px] backdrop-saturate-125 "
         : "bg-[var(--color-nuimpact-blue)]"
         }`}
     >
@@ -30,19 +30,19 @@ const Navbar = ({ logoColor }) => {
             {/* <!-- Logo --> */}
 
             <NavLink className="flex flex-shrink-0 items-center mr-2" to="/">
-              <img className="h-10 w-auto" src="/assets/images/nuimpact-logo.png" alt="NUImpact Logo" />
-              <span className={`hidden md:block text-2xl font-bold ml-2 ${logoColor === 'black' ? 'text-black' : 'text-white'}`}>
+              <img className="h-14 w-auto" src="/assets/images/nuimpact-logo.png" alt="NUImpact Logo" />
+              <span className="hidden md:block text-3xl font-bold ml-2 text-white">
                 NUImpact
               </span>
             </NavLink>
             <div className="md:ml-auto">
-              <div className="flex space-x-2">
+              <div className="flex space-x-8 items-center">
                 <NavLink to="/" className={linkClass}>
                   Home
                 </NavLink>
                 {/* About Button Dropdown */}
                 <div className="relative group flex items-center">
-                  <span className="px-2 py-1.5 text-black">
+                  <span className="px-4 py-2 text-xl font-medium text-white cursor-pointer">
                     About
                   </span>
 
@@ -55,16 +55,16 @@ const Navbar = ({ logoColor }) => {
                       transition-opacity duration-200
                     "
                   >
-                    <div className="rounded-md bg-white shadow-lg">
+                    <div className=" bg-white shadow-lg">
                       <NavLink
                         to="/our-story"
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Our Story
                       </NavLink>
                       <NavLink
                         to="/our-team"
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Our Team
                       </NavLink>
@@ -73,7 +73,7 @@ const Navbar = ({ logoColor }) => {
                 </div>
                 {/* Our Work Button Dropdown */}
                 <div className="relative group flex items-center">
-                  <span className="px-2 py-1.5 text-black">
+                  <span className="px-4 py-2 text-xl font-medium text-white cursor-pointer">
                     Our Work
                   </span>
 
@@ -86,28 +86,28 @@ const Navbar = ({ logoColor }) => {
                       transition-opacity duration-200
                     "
                   >
-                    <div className="rounded-md bg-white shadow-lg">
+                    <div className="bg-white shadow-lg">
                       <NavLink
                         to="/investment-thesis"
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Investment Thesis
                       </NavLink>
                       <NavLink
                         to="/portfolio"
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Portfolio
                       </NavLink>
                       <NavLink
                         to="/summit"
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Summit
                       </NavLink>
                       <NavLink
                         to="/our-impact"
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Our Impact
                       </NavLink>
@@ -116,7 +116,7 @@ const Navbar = ({ logoColor }) => {
                 </div>
                 {/* Get Involved Button Dropdown */}
                 <div className="relative group flex items-center">
-                  <span className="px-2 py-1.5 text-black">
+                  <span className="px-4 py-2 text-xl font-medium text-white cursor-pointer">
                     Get Involved
                   </span>
 
@@ -129,22 +129,22 @@ const Navbar = ({ logoColor }) => {
                       transition-opacity duration-200
                     "
                   >
-                    <div className="rounded-md bg-white shadow-lg">
+                    <div className="bg-white shadow-lg">
                       <NavLink
                         to="/student-experience"
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Student Experience
                       </NavLink>
                       <NavLink
                         to="/faq"
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         FAQ
                       </NavLink>
                       <NavLink
                         to="/donate"
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Donate
                       </NavLink>

@@ -17,7 +17,7 @@ const PortfolioCard = ({ company }) => {
 
     return (
         <div
-            className="flex flex-col md:flex-row w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-lg md:h-[540px]"
+            className="flex flex-col md:flex-row w-full max-w-5xl mx-auto overflow-hidden shadow-lg md:h-[540px]"
             style={{ backgroundColor }}
         >
             {/* Left Column: Brand & Facts */}

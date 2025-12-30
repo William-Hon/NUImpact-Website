@@ -15,7 +15,10 @@ const ImageCarouselSection = ({ slides }) => {
   return (
     <div className="relative w-full h-full flex px-10 py-15 items-center justify-center">
       {/* CARD */}
-      <div className="relative w-full max-w-[90vw] h-[80vh] overflow-hidden ">
+      <div className="relative w-full max-w-[90vw] h-[80vh] overflow-hidden shadow-2xl">
+        {/* INSET WHITE BORDER FRAME */}
+        <div className="absolute inset-2 z-50 pointer-events-none border-4 border-white" />
+
         {/* image inside card */}
         <img
           src={slides[index].image}
@@ -25,12 +28,12 @@ const ImageCarouselSection = ({ slides }) => {
 
         {/* TRUE BLUR GRADIENT PANEL */}
         <div
-          className="absolute inset-y-0 left-0 w-[60%] z-10 pointer-events-none backdrop-blur-xl bg-blue-900/25"
+          className="absolute inset-y-0 left-0 w-[75%] z-10 pointer-events-none bg-black/75"
           style={{
             WebkitMaskImage:
-              "linear-gradient(to right, black 0%, black 50%, transparent 100%)",
+              "linear-gradient(to right, black 0%, black 60%, transparent 100%)",
             maskImage:
-              "linear-gradient(to right, black 0%, black 50%, transparent 100%)",
+              "linear-gradient(to right, black 0%, black 60%, transparent 100%)",
           }}
         />
 
@@ -58,20 +61,13 @@ const ImageCarouselSection = ({ slides }) => {
           <button
             onClick={next}
             className="
-              absolute right-0 top-0 bottom-0
-              h-full aspect-[1/2]
-              bg-white/30
-              text-white
-              rounded-l-full
-              flex items-center justify-center gap-2
-              z-20
-              transition-colors duration-200
-              hover:bg-white
-              hover:text-black
-            "
+                absolute right-6 top-1/2 -translate-y-1/2
+                text-white text-2xl font-bold
+                hover:translate-x-1
+                z-20 text-[80px]
+              "
           >
-            <span className="text-lg font-medium">Next</span>
-            <span className="text-lg">›</span>
+            ❱
           </button>
         )}
 
@@ -113,7 +109,7 @@ const ImageCarouselSection = ({ slides }) => {
                 z-20 text-[80px]
               "
             >
-              ❯
+              ❱
             </button>
           </>
         )}

@@ -2,45 +2,42 @@ import React from "react";
 
 const StatsPanel = () => {
   return (
-    <div className="relative w-full py-8">
-      {/* Background */}
-      <div className="absolute inset-0 blur-sm rounded-xl" style={{ backgroundColor: "var(--color-nuimpact-gray)" }}
-      />
-
-      {/* Content */}
-      <div className="relative z-10 flex justify-center">
-        <div className="flex flex-col gap-10 text-center px-6">
-          <h1 className="text-3xl text-white font-bold underline">
+    <div className="w-full h-full flex justify-center">
+      <div className="w-full h-full min-h-[600px] max-w-sm bg-[var(--color-nuimpact-dark-blue)] p-2 shadow-xl flex flex-col">
+        <div className="border-4 border-white w-full flex-1 flex flex-col items-center justify-between py-10 px-6 text-center">
+          <h1 className="text-4xl text-white font-bold underline decoration-white/30 underline-offset-8">
             By The Numbers
           </h1>
 
-          {/* STAT 1 */}
-          <div className="flex flex-col gap-2">
-            <div className="text-8xl font-bold text-[var(--color-nuimpact-dark-blue)]">
-              72
+          <div className="flex flex-col flex-grow justify-evenly items-center w-full">
+            {/* STAT 1 */}
+            <div className="flex flex-col gap-2">
+              <div className="text-6xl md:text-7xl font-bold text-white">
+                72
+              </div>
+              <div className="text-2xl md:text-3xl text-white font-semibold">
+                Active Members
+              </div>
             </div>
-            <div className="text-4xl text-white font-semibold">
-              Active Members
-            </div>
-          </div>
 
-          {/* STAT 2 */}
-          <div className="flex flex-col gap-2">
-            <div className="text-8xl font-bold text-[var(--color-nuimpact-red)]">
-              $600K
+            {/* STAT 2 */}
+            <div className="flex flex-col gap-2">
+              <div className="text-6xl md:text-7xl font-bold text-white">
+                $600K
+              </div>
+              <div className="text-2xl md:text-3xl text-white font-semibold">
+                AUM
+              </div>
             </div>
-            <div className="text-4xl text-white font-semibold">
-              AUM
-            </div>
-          </div>
 
-          {/* STAT 3 */}
-          <div className="flex flex-col gap-2">
-            <div className="text-8xl font-bold text-[var(--color-nuimpact-yellow)]">
-              15
-            </div>
-            <div className="text-4xl text-white font-semibold">
-              Annual Events
+            {/* STAT 3 */}
+            <div className="flex flex-col gap-2">
+              <div className="text-6xl md:text-7xl font-bold text-white">
+                15
+              </div>
+              <div className="text-2xl md:text-3xl text-white font-semibold">
+                Annual Events
+              </div>
             </div>
           </div>
         </div>

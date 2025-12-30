@@ -1,36 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CardSlider from "../components/CardSlider";
 
 const PortfolioPreviewSection = () => {
   return (
-    <div className="relative min-h-screen  flex items-center bg-cover bg-center">
-      {/* VIDEO */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source
-          src="/assets/videos/mountains-ambient-bg2.mp4"
-          // src="/assets/videos/blue-flakes-ambient-bg.mp4"
-          type="video/mp4"
-        />
-      </video>
-
-      {/* OVERLAY CONTENT */}
-      <div className="flex flex-col relative z-10 max-w-7xl mx-auto h-full px-16 py-32 text-white">
+    <section className="w-full bg-white py-8 md:py-16">
+      <div className="flex flex-col max-w-6xl mx-auto px-4 md:px-8">
         {/* TITLE */}
-        <h1 className="text-7xl font-bold text-center">
+        <h1 className="text-5xl md:text-6xl font-bold text-center text-[var(--color-nuimpact-dark-blue)] mb-12">
           Our Portfolio
         </h1>
 
         {/* SPLIT CONTENT UNDER TITLE */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 py-16 flex-1 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           {/* LEFT */}
-          <div className="flex flex-col items-center justify-center gap-8">
-            <h2 className="text-center text-3xl font-light">
+          <div className="flex flex-col items-center justify-center text-center gap-8">
+            <h2 className="text-2xl md:text-3xl font-medium text-[var(--color-nuimpact-dark-blue)] leading-relaxed">
               We are proud investors in 8 mission-driven businesses in the
               Northeast region.
             </h2>
@@ -38,12 +23,11 @@ const PortfolioPreviewSection = () => {
             <Link
               to="/portfolio"
               className="
-              flex items-center gap-3 px-8 py-4
-              text-white text-lg font-medium
-              border border-white/80
+              inline-flex items-center gap-3 px-8 py-3
+              bg-[var(--color-nuimpact-blue)] text-white text-lg font-medium
               rounded-full
-              hover:bg-white/10
-              transition
+              hover:opacity-90 transition
+              shadow-lg
             "
             >
               Check out our latest investment!
@@ -52,16 +36,12 @@ const PortfolioPreviewSection = () => {
           </div>
 
           {/* RIGHT */}
-          <div className="flex items-center justify-center px-16">
-            <img
-              src="/assets/images/portfolio-logos.png"
-              alt="portfolio logos"
-              className="w-full max-w-xl mx-auto"
-            />
+          <div className="flex items-center justify-center w-full">
+            <CardSlider />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

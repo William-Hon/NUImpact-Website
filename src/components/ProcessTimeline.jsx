@@ -14,7 +14,7 @@ const ProcessTimeline = ({ steps }) => {
 
                         {/* Content Card */}
                         <div className={`w-full md:w-[46%] ${index % 2 === 0 ? 'md:pl-6' : 'md:pr-6'}`}>
-                            <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all duration-300">
+                            <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 hover:bg-white/10 transition-all duration-300">
                                 <div className="text-white/40 text-sm font-bold uppercase tracking-widest mb-2">Step {index + 1}</div>
                                 <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
                                 <p className="text-sm text-gray-300 leading-relaxed">{step.description}</p>

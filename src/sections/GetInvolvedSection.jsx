@@ -9,7 +9,7 @@ const GetInvolvedSection = () => {
         </h1>
         <GetInvolvedPanel
           color="red"
-          photoURL="/assets/images/donors.png"
+          photoURL="/assets/images/donor.png"
           text="Looking to support NUImpact? Find out what a donation to our fund can do." />
       </div>
 

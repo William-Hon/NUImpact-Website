@@ -5,7 +5,7 @@ const items = [
   { label: "Empathy", text: "Everything starts with istening and understanding first.", pos: "left", image: "/assets/images/nuimpact-fund-meeting.png" },
   { label: "Humility", text: "No ego, just growth and improvement.", pos: "right", image: "/assets/images/nuimpact-guy-talking.png" },
   { label: "Community", text: "Great things are built together through collaboration and trust.", pos: "bottomLeft", image: "/assets/images/founding-team-original.png" },
-  { label: "Intention", text: "Every desicion is made with thought and purpose.", pos: "bottomRight", image: "/assets/images/donors.png" },
+  { label: "Intention", text: "Every desicion is made with thought and purpose.", pos: "bottomRight", image: "/assets/images/donor.png" },
 ];
 
 export default function ValuesSection() {

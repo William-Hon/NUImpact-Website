@@ -1,8 +1,18 @@
 import React from 'react'
-
+import HeroSection from '../sections/HeroSection'
+import FAQSection from '../sections/FAQSection'
+import Footer from '../sections/Footer'
 const FAQPage = () => {
   return (
-    <div>FAQPage</div>
+    <>
+      <HeroSection
+        title="Frequently Asked Questions"
+        backgroundImage="assets/images/nuimpact-guy-talking.png"
+        variant="page"
+      />
+      <FAQSection />
+      <Footer />
+    </>
   )
 }
 

@@ -15,11 +15,11 @@ const GetInvolvedSection = () => {
 
       <div className="flex flex-col items-center gap-6">
         <h1 className="text-4xl font-semibold">
-          Entreprenuers
+          Entrepreneurs
         </h1>
         <GetInvolvedPanel
           color="dark-blue"
-          photoURL="/assets/images/entreprenuers.png"
+          photoURL="/assets/images/entrepreneurs.png"
           text="Looking to get involved? Learn more about our community. Looking for an investment? See if you fit our criteria." />
       </div>
       <div className="flex flex-col items-center gap-6">

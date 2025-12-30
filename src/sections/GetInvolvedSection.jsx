@@ -28,7 +28,7 @@ const GetInvolvedSection = () => {
         </h1>
         <GetInvolvedPanel
           color="dark-yellow"
-          photoURL="/assets/images/students.png"
+          photoURL="/assets/images/student.png"
           text="Looking to get involved? Learn more about our community." />
       </div>
     </section>

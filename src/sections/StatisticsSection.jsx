@@ -4,7 +4,7 @@ import OverviewMission from "../components/OverviewMission.jsx";
 
 const StatisticsSection = () => {
   return (
-    <section className="w-full bg-white text-black">
+    <section className="w-full text-black">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[3fr_2fr] px-4 py-8 items-center gap-4">
         {/* LEFT COLUMN */}
         <div className="py-2">

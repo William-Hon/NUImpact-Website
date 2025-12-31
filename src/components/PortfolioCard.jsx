@@ -26,40 +26,42 @@ const PortfolioCard = ({ company }) => {
             <div className={`absolute inset-4 border-[4px] pointer-events-none z-10 ${isLightBg ? 'border-black' : 'border-white'}`} />
 
             {/* Left Column: Brand & Facts */}
-            <div className="flex-1 p-8 md:p-10 flex flex-col border-r border-black/10">
-                <div>
-                    <div className="flex items-center gap-3 mb-6">
-                        <h2 className="text-4xl font-bold tracking-tight" style={{ color: regularTextColor }}>{name}</h2>
+            <div className="flex-1 p-6 md:p-8 flex flex-col border-r border-black/10">
+                <div className="flex flex-col h-full justify-between">
+                    <div>
+                        <div className="flex items-center gap-3 mb-4">
+                            <h2 className="text-3xl md:text-4xl font-bold tracking-tight" style={{ color: regularTextColor }}>{name}</h2>
+                        </div>
+
+                        <div className="h-20 flex items-center mb-6">
+                            {logo ? (
+                                <img src={logo} alt={`${name} logo`} className="max-h-full w-auto object-contain object-left" />
+                            ) : (
+                                <div className="text-5xl font-bold opacity-40" style={{ color: regularTextColor }}>{name[0]}</div>
+                            )}
+                        </div>
                     </div>
 
-                    <div className="h-28 flex items-center mb-10">
-                        {logo ? (
-                            <img src={logo} alt={`${name} logo`} className="max-h-full w-auto object-contain object-left" />
-                        ) : (
-                            <div className="text-5xl font-bold opacity-40" style={{ color: regularTextColor }}>{name[0]}</div>
-                        )}
-                    </div>
-
-                    <div className="space-y-4">
-                        <h3 className="text-3xl font-bold " style={{ color: headerColor }}>Key Facts</h3>
-                        <div className="divide-y divide-black/10 text-base">
-                            <div className="flex justify-between py-2 gap-4 ">
+                    <div className="space-y-3">
+                        <h3 className="text-2xl font-bold " style={{ color: headerColor }}>Key Facts</h3>
+                        <div className="divide-y divide-black/10 text-sm md:text-base">
+                            <div className="flex justify-between py-1.5 gap-4 ">
                                 <span className="font-bold whitespace-nowrap" style={{ color: headerColor }}>Year Invested</span>
                                 <span className="text-right" style={{ color: regularTextColor }}>{keyFacts.yearInvested}</span>
                             </div>
-                            <div className="flex justify-between py-2 gap-4">
+                            <div className="flex justify-between py-1.5 gap-4">
                                 <span className="font-bold whitespace-nowrap" style={{ color: headerColor }}>Check Size</span>
                                 <span className="text-right" style={{ color: regularTextColor }}>{keyFacts.checkSize}</span>
                             </div>
-                            <div className="flex justify-between py-2 gap-4">
+                            <div className="flex justify-between py-1.5 gap-4">
                                 <span className="font-bold whitespace-nowrap" style={{ color: headerColor }}>Vehicle</span>
                                 <span className="text-right" style={{ color: regularTextColor }}>{keyFacts.vehicle}</span>
                             </div>
-                            <div className="flex justify-between py-2 gap-4">
+                            <div className="flex justify-between py-1.5 gap-4">
                                 <span className="font-bold whitespace-nowrap" style={{ color: headerColor }}>Vertical</span>
                                 <span className="text-right" style={{ color: regularTextColor }}>{keyFacts.vertical}</span>
                             </div>
-                            <div className="flex justify-between py-2 gap-4">
+                            <div className="flex justify-between py-1.5 gap-4">
                                 <span className="font-bold whitespace-nowrap" style={{ color: headerColor }}>Website</span>
                                 <a
                                     href={keyFacts.websiteLink}

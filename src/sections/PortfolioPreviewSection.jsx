@@ -4,7 +4,7 @@ import CardSlider from "../components/CardSlider";
 
 const PortfolioPreviewSection = () => {
   return (
-    <section className="w-full bg-white py-8 md:py-16">
+    <section className="w-full py-8 md:py-16">
       <div className="flex flex-col max-w-6xl mx-auto px-4 md:px-8">
         {/* TITLE */}
         <h1 className="text-5xl md:text-6xl font-bold text-center text-[var(--color-nuimpact-dark-blue)] mb-12">

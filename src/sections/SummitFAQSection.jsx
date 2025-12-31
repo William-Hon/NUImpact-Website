@@ -68,7 +68,7 @@ const SummitFAQSection = () => {
     return (
         <section className="bg-transparent py-32 px-8">
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-5xl md:text-7xl font-bold text-black mb-16 tracking-tighter">
+                <h2 className="text-5xl text-center md:text-7xl font-bold text-black mb-16 tracking-tighter">
                     Frequently Asked Questions
                 </h2>
 

@@ -16,15 +16,27 @@ const ImageSliderSection = ({
   const scrollRef = useRef(null);
   const firstImageRef = useRef(null);
   const [imageHeight, setImageHeight] = useState(0);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
   // Normalize data: use items if provided, otherwise convert images to item format
   const sliderItems = items || (images ? images.map(src => ({ image: src })) : []);
+
+  const checkScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      // Allow a small buffer (1px) for float calculation errors
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1);
+    }
+  };
 
   useEffect(() => {
     const updateHeight = () => {
       if (firstImageRef.current) {
         setImageHeight(firstImageRef.current.offsetHeight);
       }
+      checkScroll();
     };
 
     // Initial measurement
@@ -33,6 +45,16 @@ const ImageSliderSection = ({
     window.addEventListener('resize', updateHeight);
     return () => window.removeEventListener('resize', updateHeight);
   }, [sliderItems]);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (container) {
+      container.addEventListener('scroll', checkScroll);
+      // Check initially
+      checkScroll();
+      return () => container.removeEventListener('scroll', checkScroll);
+    }
+  }, [sliderItems, mode]);
 
   useEffect(() => {
     if (mode !== "auto") return;
@@ -78,20 +100,28 @@ const ImageSliderSection = ({
             style={{ top: imageHeight / 2, transform: 'translateY(-50%)' }}
           >
             <div className="relative w-full flex justify-between items-center">
-              <button
-                onClick={() => scrollBy(-1)}
-                className="pointer-events-auto bg-black/40 backdrop-blur-md text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-black/60 transition-all border border-white/20 shadow-xl ml-[-50px] md:ml-[-64px]"
-                aria-label="Previous slide"
-              >
-                <FiChevronLeft size={28} />
-              </button>
-              <button
-                onClick={() => scrollBy(1)}
-                className="pointer-events-auto bg-black/40 backdrop-blur-md text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-black/60 transition-all border border-white/20 shadow-xl mr-[-50px] md:mr-[-64px]"
-                aria-label="Next slide"
-              >
-                <FiChevronRight size={28} />
-              </button>
+              <div className="w-12 h-12 ml-[-50px] md:ml-[-64px]">
+                {canScrollLeft && (
+                  <button
+                    onClick={() => scrollBy(-1)}
+                    className="pointer-events-auto bg-black/40 backdrop-blur-md text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-black/60 transition-all border border-white/20 shadow-xl"
+                    aria-label="Previous slide"
+                  >
+                    <FiChevronLeft size={28} />
+                  </button>
+                )}
+              </div>
+              <div className="w-12 h-12 mr-[-50px] md:mr-[-64px]">
+                {canScrollRight && (
+                  <button
+                    onClick={() => scrollBy(1)}
+                    className="pointer-events-auto bg-black/40 backdrop-blur-md text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-black/60 transition-all border border-white/20 shadow-xl"
+                    aria-label="Next slide"
+                  >
+                    <FiChevronRight size={28} />
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         )}

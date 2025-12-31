@@ -2,7 +2,7 @@ import React from 'react'
 import HeroSection from '../sections/HeroSection'
 import Footer from '../sections/Footer'
 import ImageSlider from '../components/ImageSlider'
-
+import ScrollReveal from '../components/ScrollReveal'
 const OurImpactPage = () => {
   const spotlightItems = [
     {
@@ -37,27 +37,37 @@ const OurImpactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <HeroSection
-        title="Research & Reports"
-        subtitle="Analysis with intent."
-        backgroundImage="/assets/images/nuimpact-team-alt.png"
-        variant="page"
-      />
+    <div className="min-h-screen bg-white relative selection:bg-[var(--color-nuimpact-blue)] selection:text-white">
+      {/* Universal Background Gradient (Enhanced) */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div className="absolute -top-[20%] -left-[10%] w-[800px] h-[800px] md:w-[60vw] md:h-[60vw] bg-[var(--color-nuimpact-light-blue)]/40 rounded-full blur-[100px] opacity-70" />
+        <div className="absolute bottom-[10%] -right-[10%] w-[600px] h-[600px] md:w-[50vw] md:h-[50vw] bg-[var(--color-nuimpact-blue)]/40 rounded-full blur-[100px] opacity-70" />
+      </div>
 
-      <section className="bg-[#4660aa] py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <ImageSlider
-            items={spotlightItems}
-            mode="manual"
-            gap="gap-8"
-            height="aspect-[4/5] md:aspect-[3/4]"
-            objectFit="object-contain"
-          />
-        </div>
-      </section>
+      <div className="relative z-10">
+        <HeroSection
+          title="Research & Reports"
+          subtitle="Analysis with intent."
+          backgroundImage="/assets/images/nuimpact-team-alt.png"
+          variant="page"
+        />
 
-      <Footer />
+        <ScrollReveal>
+          <section className="bg-transparent py-20 px-4">
+            <div className="max-w-7xl mx-auto">
+              <ImageSlider
+                items={spotlightItems}
+                mode="manual"
+                gap="gap-8"
+                height="aspect-[4/5] md:aspect-[3/4]"
+                objectFit="object-cover"
+                textColor="text-[var(--color-nuimpact-dark-blue)]"
+              />
+            </div>
+          </section>
+        </ScrollReveal>
+        <Footer />
+      </div>
     </div>
   )
 }

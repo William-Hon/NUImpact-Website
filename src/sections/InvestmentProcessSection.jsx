@@ -34,8 +34,8 @@ const InvestmentProcessSection = () => {
             {/* Process Section */}
             <section className="py-16 px-8">
                 <div className="max-w-7xl mx-auto mb-12 text-center">
-                    <h2 className="text-4xl font-bold mb-4">Our Process</h2>
-                    <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                    <h2 className="text-4xl font-bold mb-4 text-[var(--color-nuimpact-darker-blue)]">Our Process</h2>
+                    <p className="text-lg text-[var(--color-nuimpact-darker-blue)] max-w-2xl mx-auto opacity-80">
                         A rigorous, student-led diligence process that ensures every dollar is deployed with intention.
                     </p>
                 </div>
@@ -43,10 +43,10 @@ const InvestmentProcessSection = () => {
             </section >
 
             {/* Impact Section */}
-            < section className="py-16 px-8 bg-[var(--color-nuimpact-blue)] text-white" >
+            < section className="py-16 px-8" >
                 <div className="max-w-7xl mx-auto text-center">
-                    <h2 className="text-4xl font-bold mb-6 italic">Measured Impact, Proven Returns.</h2>
-                    <p className="text-lg max-w-3xl mx-auto mb-8 leading-relaxed">
+                    <h2 className="text-4xl font-bold mb-6 italic text-[var(--color-nuimpact-darker-blue)]">Measured Impact, Proven Returns.</h2>
+                    <p className="text-lg max-w-3xl mx-auto mb-8 leading-relaxed text-[var(--color-nuimpact-darker-blue)]">
                         We utilize proprietary impact measurement frameworks to track and report on the specific social and environmental outcomes of our portfolio companies.
                     </p>
                     <div className="max-w-5xl mx-auto mb-12">
@@ -54,7 +54,7 @@ const InvestmentProcessSection = () => {
                     </div>
                     <Link
                         to="/our-impact"
-                        className="px-10 py-3 bg-white text-[var(--color-nuimpact-blue)] font-bold rounded-full hover:scale-105 transition-transform duration-300 shadow-lg shadow-black/50">
+                        className="inline-block px-10 py-3 bg-[var(--color-nuimpact-darker-blue)] text-white font-bold rounded-full hover:scale-110 transition-transform duration-300 shadow-lg shadow-black/50">
                         View Our Impact Report
                     </Link>
                 </div>

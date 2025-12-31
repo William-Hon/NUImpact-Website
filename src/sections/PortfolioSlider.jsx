@@ -24,18 +24,27 @@ const PortfolioSlider = ({ investments }) => {
     const nextCompany = showcaseItems[(currentIndex + 1) % showcaseItems.length];
 
     return (
-        <section className="py-16 px-4 bg-gray-50 overflow-hidden relative">
-            <div className="max-w-[1700px] mx-auto flex items-center justify-between gap-1 md:gap-2">
+        <section className="py-16 px-4 bg-white overflow-hidden relative selection:bg-[var(--color-nuimpact-blue)] selection:text-white">
+            {/* Universal Background Gradient */}
+            <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+                <div className="absolute -top-[20%] -left-[10%] w-[800px] h-[800px] md:w-[60vw] md:h-[60vw] bg-[var(--color-nuimpact-light-blue)]/40 rounded-full blur-[100px] opacity-70" />
+                <div className="absolute bottom-[10%] -right-[10%] w-[600px] h-[600px] md:w-[50vw] md:h-[50vw] bg-[var(--color-nuimpact-blue)]/40 rounded-full blur-[100px] opacity-70" />
+            </div>
+
+            <div className="max-w-[1700px] mx-auto flex items-center justify-between gap-1 md:gap-2 relative z-10">
 
                 {/* Left Peek/Arrow */}
-                <div className="hidden lg:flex items-center gap-2 flex-1 justify-end max-w-[150px] xl:max-w-[300px]">
-                    <div
-                        className="w-full h-[540px] blur-[1px] shadow-sm transform -translate-x-1/4"
-                        style={{ backgroundColor: prevCompany.backgroundColor }}
-                    />
+                <div className="hidden lg:flex items-center gap-2 flex-1 justify-end max-w-[150px] xl:max-w-[300px] h-[540px] relative overflow-hidden opacity-60">
+                    {/* Show the RIGHT side of the previous card */}
+                    <div className="absolute top-0 right-4 w-[1024px] h-full pointer-events-none blur-[2px]">
+                        <PortfolioCard company={prevCompany} />
+                    </div>
+                    {/* Gradient Fade Overlay for Left Side */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/80 to-transparent z-10 pointer-events-none" />
+
                     <button
                         onClick={prevSlide}
-                        className="p-4 rounded-full bg-white shadow-xl text-gray-800 hover:bg-gray-100 transition-all z-20 "
+                        className="absolute right-8 p-4 rounded-full bg-white shadow-xl text-gray-800 hover:bg-gray-100 transition-all z-20"
                         aria-label="Previous slide"
                     >
                         <FaChevronLeft size={24} />
@@ -68,18 +77,21 @@ const PortfolioSlider = ({ investments }) => {
                 </div>
 
                 {/* Right Peek/Arrow */}
-                <div className="hidden lg:flex items-center gap-2 flex-1 justify-start max-w-[150px] xl:max-w-[300px]">
+                <div className="hidden lg:flex items-center gap-2 flex-1 justify-start max-w-[150px] xl:max-w-[300px] h-[540px] relative overflow-hidden opacity-60">
+                    {/* Show the LEFT side of the next card */}
+                    <div className="absolute top-0 left-4 w-[1024px] h-full pointer-events-none blur-[2px]">
+                        <PortfolioCard company={nextCompany} />
+                    </div>
+                    {/* Gradient Fade Overlay for Right Side */}
+                    <div className="absolute inset-0 bg-gradient-to-l from-white/80 to-transparent z-10 pointer-events-none" />
+
                     <button
                         onClick={nextSlide}
-                        className="p-4 rounded-full bg-white shadow-xl text-gray-800 hover:bg-gray-100 transition-all z-20"
+                        className="absolute left-8 p-4 rounded-full bg-white shadow-xl text-gray-800 hover:bg-gray-100 transition-all z-20"
                         aria-label="Next slide"
                     >
                         <FaChevronRight size={24} />
                     </button>
-                    <div
-                        className="w-full h-[540px] blur-[1px] shadow-sm transform translate-x-1/4"
-                        style={{ backgroundColor: nextCompany.backgroundColor }}
-                    />
                 </div>
 
                 <button

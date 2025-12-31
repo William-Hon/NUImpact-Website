@@ -37,6 +37,10 @@ const InvestmentTimelineSection = ({ investments }) => {
         >
             {/* Dark Overlay for Readability */}
             <div className="absolute inset-0 z-0 bg-black/70" />
+
+            {/* Top fade to blend with Hero section */}
+            <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-black/90 to-transparent pointer-events-none z-10" />
+
             {/* Big Background Year Number */}
             <div className="absolute top-1/2 right-0 transform translate-x-1 -translate-y-75 text-[300px] md:text-[500px] font-bold text-white/5 select-none pointer-events-none leading-none z-0">
                 {activeItem.year.toString().slice(-2)}'

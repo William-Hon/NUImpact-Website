@@ -4,7 +4,7 @@ import SummitOverviewSection from '../sections/SummitOverviewSection';
 import SummitComingSoonSection from '../sections/SummitComingSoonSection';
 import SummitFAQSection from '../sections/SummitFAQSection';
 import Footer from '../sections/Footer';
-
+import ScrollReveal from '../components/ScrollReveal'
 const SummitPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,8 +20,12 @@ const SummitPage = () => {
 
       <div className="relative z-10">
         <SummitHeroSection />
-        <SummitOverviewSection />
-        <SummitFAQSection />
+        <ScrollReveal>
+          <SummitOverviewSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <SummitFAQSection />
+        </ScrollReveal>
         <Footer />
       </div>
     </div>

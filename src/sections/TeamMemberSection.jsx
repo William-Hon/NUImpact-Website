@@ -62,14 +62,7 @@ const TeamMemberSection = () => {
 
                 {/* Left Column: Team Listings */}
                 <div className="w-full lg:w-3/4 space-y-4">
-                    <div className="flex justify-end mb-4">
-                        <button
-                            onClick={handleCollapseAll}
-                            className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2  text-sm font-medium transition-colors border border-gray-200"
-                        >
-                            Collapse All
-                        </button>
-                    </div>
+
                     {(() => {
                         const leadershipMembers = getMembersByProgram("Leadership");
                         const fundMembers = getMembersByProgram("Fund");
@@ -144,6 +137,15 @@ const TeamMemberSection = () => {
                                 </button>
                             ))}
                         </div>
+                    </div>
+
+                    <div className="flex justify-start">
+                        <button
+                            onClick={handleCollapseAll}
+                            className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 text-sm font-medium transition-colors border border-gray-200"
+                        >
+                            Collapse All
+                        </button>
                     </div>
                 </div>
             </div>

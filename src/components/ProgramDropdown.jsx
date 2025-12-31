@@ -15,7 +15,7 @@ const ProgramDropdown = ({ program, members, isOpen }) => {
     };
 
     return (
-        <div className="mb-4 overflow-hidden shadow-sm border border-gray-100">
+        <div className="mb-4 overflow-hidden shadow-sm">
             {/* HEADER */}
             <button
                 onClick={() => setOpen(!open)}

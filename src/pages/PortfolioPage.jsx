@@ -4,6 +4,7 @@ import InvestmentTimelineSection from '../sections/InvestmentTimelineSection'
 import PortfolioSlider from '../sections/PortfolioSlider'
 import investments from '../data/Investments'
 import Footer from '../sections/Footer'
+import ScrollReveal from '../components/ScrollReveal'
 
 const PortfolioPage = () => {
   return (
@@ -14,7 +15,9 @@ const PortfolioPage = () => {
         backgroundImage="/assets/images/judges.png"
         variant="page" />
       <InvestmentTimelineSection investments={investments} />
-      <PortfolioSlider investments={investments} />
+      <ScrollReveal>
+        <PortfolioSlider investments={investments} />
+      </ScrollReveal>
       <Footer />
     </>
   )

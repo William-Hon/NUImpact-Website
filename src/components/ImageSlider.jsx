@@ -100,7 +100,7 @@ const ImageSliderSection = ({
             style={{ top: imageHeight / 2, transform: 'translateY(-50%)' }}
           >
             <div className="relative w-full flex justify-between items-center">
-              <div className="w-12 h-12 ml-[-50px] md:ml-[-64px]">
+              <div className="w-12 h-12 ml-2 2xl:ml-[-64px]">
                 {canScrollLeft && (
                   <button
                     onClick={() => scrollBy(-1)}
@@ -111,7 +111,7 @@ const ImageSliderSection = ({
                   </button>
                 )}
               </div>
-              <div className="w-12 h-12 mr-[-50px] md:mr-[-64px]">
+              <div className="w-12 h-12 mr-2 2xl:mr-[-64px]">
                 {canScrollRight && (
                   <button
                     onClick={() => scrollBy(1)}
@@ -130,7 +130,7 @@ const ImageSliderSection = ({
         <div ref={scrollRef} className="overflow-hidden w-full">
           <div className={`flex ${gap}`}>
             {renderedItems.map((item, i) => (
-              <div key={i} className={`flex-shrink-0 flex flex-col ${item.title ? 'w-[300px] md:w-[450px]' : ''}`}>
+              <div key={i} className={`flex-shrink-0 flex flex-col ${item.title ? 'w-[280px] md:w-[350px]' : ''}`}>
                 {/* Image Container */}
                 <img
                   ref={i === 0 ? firstImageRef : null}

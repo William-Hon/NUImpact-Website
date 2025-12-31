@@ -26,8 +26,8 @@ export default function ValuesSection() {
           </div>
         </div>
 
-        {/* RIGHT FLOWER - Pushed to the left (towards center) */}
-        <div className="flex justify-center lg:justify-start transform scale-75 md:scale-80 origin-center">
+        {/* RIGHT FLOWER - Centered in column to avoid overlap */}
+        <div className="flex justify-center lg:justify-center transform scale-[0.40] sm:scale-[0.55] md:scale-[0.7] lg:scale-[0.65] origin-center">
           <FlowerCircles values={items} />
         </div>
       </div>

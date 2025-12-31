@@ -34,7 +34,7 @@ const PortfolioSlider = ({ investments }) => {
             <div className="max-w-[1700px] mx-auto flex items-center justify-between gap-1 md:gap-2 relative z-10">
 
                 {/* Left Peek/Arrow */}
-                <div className="hidden lg:flex items-center gap-2 flex-1 justify-end max-w-[150px] xl:max-w-[300px] h-[540px] relative overflow-hidden opacity-60">
+                <div className="hidden lg:flex items-center gap-2 flex-1 justify-end max-w-[150px] xl:max-w-[300px] h-[450px] relative overflow-hidden opacity-60">
                     {/* Show the RIGHT side of the previous card */}
                     <div className="absolute top-0 right-4 w-[1024px] h-full pointer-events-none blur-[2px]">
                         <PortfolioCard company={prevCompany} />
@@ -77,7 +77,7 @@ const PortfolioSlider = ({ investments }) => {
                 </div>
 
                 {/* Right Peek/Arrow */}
-                <div className="hidden lg:flex items-center gap-2 flex-1 justify-start max-w-[150px] xl:max-w-[300px] h-[540px] relative overflow-hidden opacity-60">
+                <div className="hidden lg:flex items-center gap-2 flex-1 justify-start max-w-[150px] xl:max-w-[300px] h-[450px] relative overflow-hidden opacity-60">
                     {/* Show the LEFT side of the next card */}
                     <div className="absolute top-0 left-4 w-[1024px] h-full pointer-events-none blur-[2px]">
                         <PortfolioCard company={nextCompany} />

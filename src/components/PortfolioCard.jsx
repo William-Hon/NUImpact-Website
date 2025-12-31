@@ -19,7 +19,7 @@ const PortfolioCard = ({ company }) => {
 
     return (
         <div
-            className="flex flex-col md:flex-row w-full max-w-5xl mx-auto overflow-hidden shadow-lg md:h-[540px] relative"
+            className="flex flex-col md:flex-row w-full max-w-5xl mx-auto overflow-hidden shadow-lg md:h-[450px] relative"
             style={{ backgroundColor }}
         >
             {/* Inset Border (Black for light cards, White for dark cards) */}

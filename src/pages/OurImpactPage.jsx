@@ -37,7 +37,7 @@ const OurImpactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white relative selection:bg-[var(--color-nuimpact-blue)] selection:text-white">
+    <div className="min-h-screen bg-white relative selection:bg-[var(--color-nuimpact-blue)] selection:text-white overflow-x-hidden">
       {/* Universal Background Gradient (Enhanced) */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute -top-[20%] -left-[10%] w-[800px] h-[800px] md:w-[60vw] md:h-[60vw] bg-[var(--color-nuimpact-light-blue)]/40 rounded-full blur-[100px] opacity-70" />
@@ -59,7 +59,7 @@ const OurImpactPage = () => {
                 items={spotlightItems}
                 mode="manual"
                 gap="gap-8"
-                height="aspect-[4/5] md:aspect-[3/4]"
+                height="aspect-[4/5]"
                 objectFit="object-cover"
                 textColor="text-[var(--color-nuimpact-dark-blue)]"
               />

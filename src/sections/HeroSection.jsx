@@ -30,7 +30,7 @@ const Hero = ({
           }`}
       >
         <ScrollReveal>
-          <div className={`flex flex-col space-y-4 w-[60vw] max-w-1xl ${isHome ? "mx-auto" : ""}`}>
+          <div className={`flex flex-col space-y-4 max-w-1xl ${isHome ? "mx-auto" : ""}`}>
             <h1 className="text-white text-8xl font-bold">{title}</h1>
             {subtitle && (
               <h2 className="text-white text-4xl font-semibold">{subtitle}</h2>

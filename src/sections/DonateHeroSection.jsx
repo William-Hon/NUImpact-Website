@@ -7,7 +7,7 @@ const DonateHeroSection = () => {
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img
-                    src="/assets/images/student.png"
+                    src="/assets/images/donate-hero.png"
                     alt="Child giving a thumbs up"
                     className="h-full w-full object-cover"
                 />

@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroSection from '../sections/HeroSection'
-import InvestmentTimeline from '../sections/InvestmentTimeline'
+import InvestmentTimelineSection from '../sections/InvestmentTimelineSection'
 import PortfolioSlider from '../sections/PortfolioSlider'
 import investments from '../data/Investments'
 import Footer from '../sections/Footer'
@@ -13,7 +13,7 @@ const PortfolioPage = () => {
         subtitle="Backing ideas that matter."
         backgroundImage="/assets/images/judges.png"
         variant="page" />
-      <InvestmentTimeline investments={investments} />
+      <InvestmentTimelineSection investments={investments} />
       <PortfolioSlider investments={investments} />
       <Footer />
     </>

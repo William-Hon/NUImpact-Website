@@ -15,11 +15,16 @@ const PortfolioCard = ({ company }) => {
         testimonial
     } = company;
 
+    const isLightBg = backgroundColor?.includes('dorchester') || backgroundColor?.includes('eatwell') || backgroundColor?.includes('agritrak') || backgroundColor?.includes('imago');
+
     return (
         <div
-            className="flex flex-col md:flex-row w-full max-w-5xl mx-auto overflow-hidden shadow-lg md:h-[540px]"
+            className="flex flex-col md:flex-row w-full max-w-5xl mx-auto overflow-hidden shadow-lg md:h-[540px] relative"
             style={{ backgroundColor }}
         >
+            {/* Inset Border (Black for light cards, White for dark cards) */}
+            <div className={`absolute inset-4 border-[4px] pointer-events-none z-10 ${isLightBg ? 'border-black' : 'border-white'}`} />
+
             {/* Left Column: Brand & Facts */}
             <div className="flex-1 p-8 md:p-10 flex flex-col border-r border-black/10">
                 <div>

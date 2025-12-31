@@ -17,7 +17,7 @@ export default function FlowerCircles({ values }) {
                     className={`
                         absolute group
                         h-60 w-60 rounded-full
-                        ring-3 ring-white/60
+                        ring-3 ring-[var(--color-nuimpact-dark-blue)]
                         overflow-hidden
                         cursor-pointer
                         transition-all duration-300 ease-out

@@ -19,10 +19,7 @@ const Navbar = ({ logoColor }) => {
 
   return (
     <nav
-      className={`fixed top-0 py-4 w-full z-50 transition-colors duration-300 ${onHero
-        ? "bg-black/25 backdrop-blur-[2px] backdrop-saturate-125 "
-        : "bg-[var(--color-nuimpact-blue)]"
-        }`}
+      className={"fixed top-0 py-4 w-full z-50 transition-colors duration-300 bg-black/25 backdrop-blur-[2px] backdrop-saturate-125"}
     >
       <div className="w-full px-10">
         <div className="flex h-20 items-center justify-between">
@@ -55,7 +52,7 @@ const Navbar = ({ logoColor }) => {
                       transition-opacity duration-200
                     "
                   >
-                    <div className=" bg-white shadow-lg">
+                    <div className="z-50 bg-white shadow-lg">
                       <NavLink
                         to="/our-story"
                         className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
@@ -64,7 +61,7 @@ const Navbar = ({ logoColor }) => {
                       </NavLink>
                       <NavLink
                         to="/our-team"
-                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
+                        className="z-50 block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Our Team
                       </NavLink>
@@ -86,28 +83,28 @@ const Navbar = ({ logoColor }) => {
                       transition-opacity duration-200
                     "
                   >
-                    <div className="bg-white shadow-lg">
+                    <div className="z-50 bg-white shadow-lg">
                       <NavLink
                         to="/investment-thesis"
-                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
+                        className="z-50 block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Investment Thesis
                       </NavLink>
                       <NavLink
                         to="/portfolio"
-                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
+                        className="z-50 block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Portfolio
                       </NavLink>
                       <NavLink
                         to="/summit"
-                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
+                        className="z-50 block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Summit
                       </NavLink>
                       <NavLink
                         to="/our-impact"
-                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
+                        className="z-50 block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Our Impact
                       </NavLink>
@@ -129,22 +126,22 @@ const Navbar = ({ logoColor }) => {
                       transition-opacity duration-200
                     "
                   >
-                    <div className="bg-white shadow-lg">
+                    <div className="z-50 bg-white shadow-lg">
                       <NavLink
                         to="/student-experience"
-                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
+                        className="z-50 block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Student Experience
                       </NavLink>
                       <NavLink
                         to="/faq"
-                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
+                        className="z-50 block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         FAQ
                       </NavLink>
                       <NavLink
                         to="/donate"
-                        className="block px-6 py-3 text-lg text-black hover:bg-gray-100"
+                        className="z-50 block px-6 py-3 text-lg text-black hover:bg-gray-100"
                       >
                         Donate
                       </NavLink>

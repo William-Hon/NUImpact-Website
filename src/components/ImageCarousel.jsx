@@ -17,7 +17,7 @@ const ImageCarouselSection = ({ slides }) => {
       {/* CARD */}
       <div className="relative w-full max-w-[90vw] h-[80vh] overflow-hidden shadow-2xl">
         {/* INSET WHITE BORDER FRAME */}
-        <div className="absolute inset-2 z-50 pointer-events-none border-4 border-white" />
+        <div className="absolute inset-2 z-20 pointer-events-none border-4 border-white" />
 
         {/* image inside card */}
         <img

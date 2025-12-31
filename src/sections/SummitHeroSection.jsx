@@ -13,18 +13,14 @@ const SummitHero = () => {
     };
 
     return (
-        <section className="bg-white pt-32 pb-24 px-8 flex flex-col items-center relative overflow-hidden">
-            {/* Dynamic Background Elements - Multi-color Mesh Effect (Blue Dominant) */}
-            <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-[var(--color-nuimpact-blue)]/40 rounded-full blur-[160px] animate-pulse pointer-events-none" />
-            <div className="absolute top-1/2 -left-1/4 w-[500px] h-[500px] bg-[var(--color-nuimpact-red)]/10 rounded-full blur-[130px] pointer-events-none" />
-            <div className="absolute bottom-0 -right-1/4 w-[900px] h-[900px] bg-[var(--color-nuimpact-blue)]/35 rounded-full blur-[160px] pointer-events-none" />
-            <div className="absolute -bottom-1/4 left-1/3 w-[500px] h-[500px] bg-[var(--color-nuimpact-yellow)]/10 rounded-full blur-[120px] animate-pulse pointer-events-none" />
+        <section className="bg-transparent pt-32 pb-24 px-8 flex flex-col items-center relative overflow-hidden">
+
 
             <div className="relative z-10 flex flex-col items-center w-full">
                 {/* Minimalist Header */}
                 <div className="text-center mb-8">
                     <p className="text-sm font-bold uppercase tracking-[0.3em] text-gray-400 mb-1">Take a look into</p>
-                    <h1 className="text-9xl font-black text-black tracking-tighter">NUSIS</h1>
+                    <h1 className="text-9xl font-black text-[var(--color-nuimpact-dark-blue)] tracking-tighter">NUSIS</h1>
                 </div>
 
                 {/* Video Container */}

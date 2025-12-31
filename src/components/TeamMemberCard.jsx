@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const TeamMemberCard = ({ member }) => {
   return (
-    <div className="h-full flex flex-col rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-black bg-white">
+    <div className="h-full flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
       {/* Image */}
       <div className="h-96 w-full overflow-hidden flex-shrink-0 relative bg-gray-200">
         <img

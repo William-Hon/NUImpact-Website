@@ -31,15 +31,12 @@ const HomePage = () => {
           subtitle="Northeastern University's Impact Investing Initiative"
           backgroundImage="/assets/images/water.jpg" />
 
-        <ScrollReveal delay={0.1}>
-          <ImageSlider
-            images={scrollImages}
-            mode="auto"
-            gap="gap-2"
-            padding="py-2"
-          />
-        </ScrollReveal>
-
+        <ImageSlider
+          images={scrollImages}
+          mode="auto"
+          gap="gap-2"
+          padding="py-2"
+        />
         <ScrollReveal>
           <StatisticsSection />
         </ScrollReveal>

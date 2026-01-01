@@ -3,53 +3,60 @@
 :root {
   /* nav bar height so hero section starts right under navbar */
   --nav-h: 80px;
+}
 
-  /* main colors */
-  --color-nuimpact-gray: #767676;
-  --color-nuimpact-blue: #4660aa;
-  --color-nuimpact-red: #b13a34;
-  --color-nuimpact-yellow: #fad06e;
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
-  /* variant colors */
-  --color-nuimpact-dark-blue: #2f3f8f;
-  --color-nuimpact-darker-blue: #0D163B;
-  --color-nuimpact-dark-gray: #333333;
-  --color-nuimpact-dark-yellow: #a17800;
-  --color-nuimpact-light-blue: #8FA3DF;
+/* main colors */
+--color-nuimpact-gray: #767676;
+--color-nuimpact-blue: #4660aa;
+--color-nuimpact-red: #b13a34;
+--color-nuimpact-yellow: #fad06e;
 
-  /* portfolio colors */
-  --color-eatwell-bg: #dceec4;
-  --color-eatwell-preview-card: #404A31;
-  --color-eatwell-header-text: #000000;
-  --color-eatwell-regular-text: #000000;
+/* variant colors */
+--color-nuimpact-dark-blue: #2f3f8f;
+--color-nuimpact-darker-blue: #0D163B;
+--color-nuimpact-dark-gray: #333333;
+--color-nuimpact-dark-yellow: #a17800;
+--color-nuimpact-light-blue: #8FA3DF;
 
-  --color-unicorn-bg: #2f3957;
-  --color-unicorn-preview-card: #d75887;
-  --color-unicorn-header-text: #d75887;
-  --color-unicorn-regular-text: #ffffff;
+/* portfolio colors */
+--color-eatwell-bg: #dceec4;
+--color-eatwell-preview-card: #404A31;
+--color-eatwell-header-text: #000000;
+--color-eatwell-regular-text: #000000;
 
-  --color-its-electric-bg: #7a2252;
-  --color-its-electric-preview-card: #eb873d;
-  --color-its-electric-header-text: #eb873d;
-  --color-its-electric-regular-text: #ffffff;
+--color-unicorn-bg: #2f3957;
+--color-unicorn-preview-card: #d75887;
+--color-unicorn-header-text: #d75887;
+--color-unicorn-regular-text: #ffffff;
 
-  --color-dorchester-bg: #ffffff;
-  --color-dorchester-preview-card: #057b3e;
-  --color-dorchester-header-text: #057b3e;
-  --color-dorchester-regular-text: #000000;
+--color-its-electric-bg: #7a2252;
+--color-its-electric-preview-card: #eb873d;
+--color-its-electric-header-text: #eb873d;
+--color-its-electric-regular-text: #ffffff;
 
-  --color-imago-powder-bg: #e3e7f2;
-  --color-imago-powder-preview-card: #2c46a8;
-  --color-imago-powder-header-text: #2c46a8;
-  --color-imago-powder-regular-text: #000000;
+--color-dorchester-bg: #ffffff;
+--color-dorchester-preview-card: #057b3e;
+--color-dorchester-header-text: #057b3e;
+--color-dorchester-regular-text: #000000;
 
-  --color-agritrak-bg: #ffdad9;
-  --color-agritrak-preview-card: #de514a;
-  --color-agritrak-header-text: #de514a;
-  --color-agritrak-regular-text: #000000;
+--color-imago-powder-bg: #e3e7f2;
+--color-imago-powder-preview-card: #2c46a8;
+--color-imago-powder-header-text: #2c46a8;
+--color-imago-powder-regular-text: #000000;
 
-  --color-volta-bg: #16172e;
-  --color-volta-preview-card: #16172e;
-  --color-volta-header-text: #116fcf;
-  --color-volta-regular-text: #ffffff;
+--color-agritrak-bg: #ffdad9;
+--color-agritrak-preview-card: #de514a;
+--color-agritrak-header-text: #de514a;
+--color-agritrak-regular-text: #000000;
+
+--color-volta-bg: #16172e;
+--color-volta-preview-card: #16172e;
+--color-volta-header-text: #116fcf;
+--color-volta-regular-text: #ffffff;
 }

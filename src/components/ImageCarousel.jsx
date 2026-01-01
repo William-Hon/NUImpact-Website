@@ -15,9 +15,9 @@ const ImageCarouselSection = ({ slides }) => {
   return (
     <div className="relative w-full h-full flex px-10 py-15 items-center justify-center">
       {/* CARD */}
-      <div className="relative w-full max-w-[90vw] h-[80vh] overflow-hidden shadow-2xl">
+      <div className="relative w-full max-w-[95vw] md:max-w-[90vw] h-[55vh] md:h-[80vh] overflow-hidden shadow-2xl rounded-2xl md:rounded-none">
         {/* INSET WHITE BORDER FRAME */}
-        <div className="absolute inset-2 z-20 pointer-events-none border-4 border-white" />
+        <div className="absolute inset-2 md:inset-4 z-20 pointer-events-none border-2 md:border-4 border-white rounded-xl md:rounded-none" />
 
         {/* image inside card */}
         <img
@@ -28,28 +28,28 @@ const ImageCarouselSection = ({ slides }) => {
 
         {/* TRUE BLUR GRADIENT PANEL */}
         <div
-          className="absolute inset-y-0 left-0 w-[75%] z-10 pointer-events-none bg-black/75"
+          className="absolute inset-y-0 left-0 w-full md:w-[75%] z-10 pointer-events-none bg-black/60 md:bg-black/75"
           style={{
             WebkitMaskImage:
-              "linear-gradient(to right, black 0%, black 60%, transparent 100%)",
+              "linear-gradient(to right, black 0%, black 40%, transparent 100%)",
             maskImage:
-              "linear-gradient(to right, black 0%, black 60%, transparent 100%)",
+              "linear-gradient(to right, black 0%, black 40%, transparent 100%)",
           }}
         />
 
 
         {/* TEXT */}
-        <div className="absolute inset-y-0 left-10 w-[45%] z-20 p-10 text-white flex">
-          <div className="max-h-full overflow-y-auto pr-4">
-            <h1 className="text-6xl font-bold">
+        <div className="absolute inset-y-0 left-0 md:left-10 w-full md:w-[45%] z-20 p-6 md:p-10 text-white flex items-center md:block">
+          <div className="max-h-full overflow-y-auto pr-2 md:pr-4 pt-4 pb-16 md:pt-0 md:pb-0">
+            <h1 className="text-4xl md:text-6xl font-bold">
               {slides[index].year}
             </h1>
 
-            <h2 className="text-3xl mt-1 font-semibold">
+            <h2 className="text-xl md:text-3xl mt-1 font-semibold">
               {slides[index].heading}
             </h2>
 
-            <h3 className="mt-7 max-w-md text-2xl leading-relaxed font-light">
+            <h3 className="mt-4 md:mt-7 max-w-md text-base md:text-2xl leading-relaxed font-light">
               {slides[index].description}
             </h3>
           </div>
@@ -61,10 +61,10 @@ const ImageCarouselSection = ({ slides }) => {
           <button
             onClick={next}
             className="
-                absolute right-6 top-1/2 -translate-y-1/2
-                text-white text-2xl font-bold
+                absolute right-4 bottom-4 md:bottom-auto md:right-6 md:top-1/2 md:-translate-y-1/2
+                text-white text-4xl md:text-[80px] font-bold
                 hover:translate-x-1
-                z-20 text-[80px]
+                z-30
               "
           >
             ❱
@@ -76,10 +76,10 @@ const ImageCarouselSection = ({ slides }) => {
           <button
             onClick={prev}
             className="
-                absolute left-4 top-1/2 -translate-y-1/2
-                text-white text-lg font-medium
+                absolute left-4 bottom-4 md:bottom-auto md:left-4 md:top-1/2 md:-translate-y-1/2
+                text-white text-4xl md:text-[80px] font-medium
                 hover:-translate-x-1
-                z-20 text-[80px]
+                z-30
               "
           >
             ❰
@@ -91,10 +91,10 @@ const ImageCarouselSection = ({ slides }) => {
             <button
               onClick={prev}
               className="
-                absolute left-4 top-1/2 -translate-y-1/2
-                text-white text-lg font-medium
+                absolute left-4 bottom-4 md:bottom-auto md:left-4 md:top-1/2 md:-translate-y-1/2
+                text-white text-4xl md:text-[80px] font-medium
                 hover:-translate-x-1
-                z-20 text-[80px]
+                z-30
               "
             >
               ❰
@@ -103,10 +103,10 @@ const ImageCarouselSection = ({ slides }) => {
             <button
               onClick={next}
               className="
-                absolute right-4 top-1/2 -translate-y-1/2
-                text-white text-lg font-medium
+                absolute right-4 bottom-4 md:bottom-auto md:right-4 md:top-1/2 md:-translate-y-1/2
+                text-white text-4xl md:text-[80px] font-medium
                 hover:translate-x-1
-                z-20 text-[80px]
+                z-30
               "
             >
               ❱

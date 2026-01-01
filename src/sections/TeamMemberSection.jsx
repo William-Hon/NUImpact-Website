@@ -58,7 +58,7 @@ const TeamMemberSection = () => {
                 </p>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-8 items-start">
+            <div className="flex flex-col-reverse lg:flex-row gap-8 items-start">
 
                 {/* Left Column: Team Listings */}
                 <div className="w-full lg:w-3/4 space-y-4">

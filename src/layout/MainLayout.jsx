@@ -17,7 +17,9 @@ const MainLayout = () => {
   return (
     <>
       <Navbar logoColor={logoColor} />
-      <Outlet />
+      <div className="w-full overflow-x-hidden">
+        <Outlet />
+      </div>
     </>
   )
 }

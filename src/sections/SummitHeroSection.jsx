@@ -34,7 +34,7 @@ const SummitHero = () => {
                 <ScrollReveal>
                     <div className="text-center mb-8">
                         <p className="text-sm font-bold uppercase tracking-[0.3em] text-gray-400 mb-1">Take a look into</p>
-                        <h1 className="text-9xl font-black text-[var(--color-nuimpact-dark-blue)] tracking-tighter">NUSIS</h1>
+                        <h1 className="text-5xl md:text-9xl font-black text-[var(--color-nuimpact-dark-blue)] tracking-tighter">NUSIS</h1>
                     </div>
                 </ScrollReveal>
 

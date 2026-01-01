@@ -1,3 +1,4 @@
+import React from 'react'
 import ProgramCard from '../components/ProgramCard'
 import HeroSection from '../sections/HeroSection'
 import ApplySection from '../sections/ApplySection'
@@ -6,6 +7,12 @@ import { testimonials } from '../data/StudentTestimonials'
 import Footer from '../sections/Footer'
 import ScrollReveal from '../components/ScrollReveal'
 const StudentExperiencePage = () => {
+
+  const [activeCard, setActiveCard] = React.useState(null);
+
+  const handleCardToggle = (cardName) => {
+    setActiveCard(prev => (prev === cardName ? null : cardName));
+  };
 
   return (
     <div className="min-h-screen bg-white relative selection:bg-[var(--color-nuimpact-blue)] selection:text-white">
@@ -22,23 +29,23 @@ const StudentExperiencePage = () => {
           variant="page" />
 
         <ScrollReveal>
-          <section style={{ padding: '4rem 4rem', maxWidth: '1500px', margin: '0 auto' }}>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '2rem'
-            }}>
+          <section className="py-12 px-4 md:p-16 max-w-[1500px] mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <ProgramCard
                 title="Fund."
                 description="Our fund team provides hands-on finance and social impact education through a rigorous semester-long investment process undertaken by teams of student analysts. The NUImpact Fund program culminates in final investment recommendations and potential capital deployment to a local mission-driven company."
                 bgColor="var(--color-nuimpact-blue)"
                 bgImage="assets/images/nuimpact-fund-team-alt.jpg"
+                isActive={activeCard === 'fund'}
+                onToggle={() => handleCardToggle('fund')}
               />
               <ProgramCard
                 title="Programming."
                 description="Our programming team hosts speaker events and workshops, leading to a robust professional network and the development of new co-op opportunities for engaged students interested in impact investing."
                 bgColor="var(--color-nuimpact-light-blue)"
                 bgImage="assets/images/nuimpact-programming-team.jpg"
+                isActive={activeCard === 'programming'}
+                onToggle={() => handleCardToggle('programming')}
               />
             </div>
           </section>

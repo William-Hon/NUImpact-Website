@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import ScrollReveal from '../components/ScrollReveal';
 
 const Hero = ({
@@ -26,17 +27,20 @@ const Hero = ({
       <div
         className={`relative z-10 h-full pt-[var(--nav-h)] flex ${isHome
           ? "items-center justify-center text-center"
-          : "items-center justify-start px-16 text-left"
+          : "items-center justify-start px-6 md:px-16 text-left"
           }`}
       >
-        <ScrollReveal>
-          <div className={`flex flex-col space-y-4 max-w-1xl ${isHome ? "mx-auto" : ""}`}>
-            <h1 className="text-white text-8xl font-bold">{title}</h1>
-            {subtitle && (
-              <h2 className="text-white text-4xl font-semibold">{subtitle}</h2>
-            )}
-          </div>
-        </ScrollReveal>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className={`flex flex-col space-y-4 max-w-1xl ${isHome ? "mx-auto" : ""}`}
+        >
+          <h1 className="text-white text-5xl md:text-8xl font-bold">{title}</h1>
+          {subtitle && (
+            <h2 className="text-white text-2xl md:text-4xl font-semibold">{subtitle}</h2>
+          )}
+        </motion.div>
       </div>
     </section>
   );

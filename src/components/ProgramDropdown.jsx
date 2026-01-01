@@ -31,7 +31,7 @@ const ProgramDropdown = ({ program, members, isOpen }) => {
             {/* CONTENT */}
             {open && (
                 <div
-                    className="grid grid-cols-3 gap-6 p-6 pt-0"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 pt-0"
                     style={{ backgroundColor: colors[program] || "var(--color-nuimpact-blue)" }}
                 >
                     {members.map((member) => (

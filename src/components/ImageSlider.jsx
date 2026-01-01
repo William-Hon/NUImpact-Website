@@ -156,6 +156,8 @@ const ImageSliderSection = ({
                       <div className="pt-2 flex justify-center">
                         <a
                           href={item.buttonLink || "#"}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-block px-6 py-2 rounded-full border-2 border-current font-bold hover:bg-white hover:text-black transition-all duration-300 text-sm"
                         >
                           {item.buttonText}

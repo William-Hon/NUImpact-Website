@@ -9,7 +9,7 @@ const DonateHeroSection = () => {
                 <img
                     src="/assets/images/donate-hero.png"
                     alt="donate image"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover object-[35%_center] md:object-center"
                 />
                 {/* Dark Gradient Overlay for better text contrast - Stronger on left */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>

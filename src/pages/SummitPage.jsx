@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import SummitHeroSection from '../sections/SummitHeroSection';
 import SummitOverviewSection from '../sections/SummitOverviewSection';
-import SummitComingSoonSection from '../sections/SummitComingSoonSection';
 import SummitFAQSection from '../sections/SummitFAQSection';
 import Footer from '../sections/Footer';
 import ScrollReveal from '../components/ScrollReveal'

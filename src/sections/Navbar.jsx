@@ -19,9 +19,17 @@ const Navbar = ({ logoColor }) => {
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     }
+
+    // Cleanup function to ensure scroll is restored if component unmounts
+    return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    };
   }, [isMobileMenuOpen]);
 
   const linkClass = ({ isActive }) =>
@@ -30,7 +38,7 @@ const Navbar = ({ logoColor }) => {
 
   return (
     <nav
-      className={`fixed top-0 py-4 w-full z-50 transition-colors duration-300 ${isMobileMenuOpen ? 'bg-[var(--color-nuimpact-blue)]' : 'bg-black/25 backdrop-blur-[2px] backdrop-saturate-125'}`}
+      className={`fixed top-0 py-4 w-full z-50 transition-colors duration-300 ${isMobileMenuOpen ? 'bg-[var(--color-nuimpact-darker-blue)]' : 'bg-black/25 backdrop-blur-[2px] backdrop-saturate-125'}`}
     >
       <div className="w-full px-10">
         <div className="flex h-20 items-center justify-between">
@@ -176,7 +184,7 @@ const Navbar = ({ logoColor }) => {
 
           {/* Mobile Menu Overlay */}
           <div
-            className={`fixed inset-0 bg-[var(--color-nuimpact-blue)] z-40 transform transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-40 px-10 overflow-y-auto ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            className={`fixed inset-0 bg-[var(--color-nuimpact-darker-blue)] z-40 transform transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-40 px-10 overflow-y-auto ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
               }`}
           >
             <div className="flex flex-col space-y-6">

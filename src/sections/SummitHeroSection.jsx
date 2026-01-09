@@ -7,13 +7,14 @@ const SummitHero = () => {
     const [isPlaying, setIsPlaying] = useState(true);
     const videoRef = useRef(null);
 
+    {/* mute toggle */ }
     const toggleMute = () => {
         if (videoRef.current) {
             videoRef.current.muted = !videoRef.current.muted;
             setIsMuted(videoRef.current.muted);
         }
     };
-
+    {/* play/pause toggle */ }
     const togglePlay = () => {
         if (videoRef.current) {
             if (isPlaying) {
@@ -30,7 +31,7 @@ const SummitHero = () => {
 
 
             <div className="relative z-10 flex flex-col items-center w-full">
-                {/* Minimalist Header */}
+                {/* Small and big header */}
                 <ScrollReveal>
                     <div className="text-center mb-8">
                         <p className="text-sm font-bold uppercase tracking-[0.3em] text-gray-400 mb-1">Take a look into</p>
@@ -40,7 +41,7 @@ const SummitHero = () => {
 
                 {/* Video Container */}
                 <div className="w-full max-w-2xl aspect-video rounded-3xl overflow-hidden shadow-2xl relative group bg-gray-100 mb-12">
-                    {/* Local Video */}
+                    {/* Video */}
                     <video
                         ref={videoRef}
                         autoPlay
@@ -52,9 +53,9 @@ const SummitHero = () => {
                         <source src="/assets/videos/nusis.mp4" type="video/mp4" />
                     </video>
 
-                    {/* Controls Container */}
+                    {/* Controls container */}
                     <div className="absolute top-4 right-4 z-20 flex gap-2">
-                        {/* Play/Pause Toggle */}
+                        {/* Play/pause toggle */}
                         <button
                             onClick={togglePlay}
                             className="p-3 bg-black/50 backdrop-blur-md rounded-full text-white hover:bg-black/70 transition-all border border-white/20 active:scale-90"
@@ -63,7 +64,7 @@ const SummitHero = () => {
                             {isPlaying ? <FiPause size={20} /> : <FiPlay size={20} />}
                         </button>
 
-                        {/* Mute Toggle */}
+                        {/* Mute toggle */}
                         <button
                             onClick={toggleMute}
                             className="p-3 bg-black/50 backdrop-blur-md rounded-full text-white hover:bg-black/70 transition-all border border-white/20 active:scale-90"

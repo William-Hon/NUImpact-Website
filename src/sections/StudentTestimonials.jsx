@@ -27,7 +27,7 @@ const StudentTestimonials = ({ testimonials }) => {
                                         />
                                     </div>
 
-                                    {/* Text Content */}
+                                    {/* Text */}
                                     <div className="w-full md:w-1/2">
                                         <h3 className="text-2xl font-bold mb-2">
                                             {testimonial.name}
@@ -41,7 +41,7 @@ const StudentTestimonials = ({ testimonials }) => {
                                     </div>
                                 </div>
 
-                                {/* Divider line (except after last item) */}
+                                {/* Divider (except after last item) */}
                                 {index < testimonials.length - 1 && (
                                     <div className="border-b border-gray-300 mt-16"></div>
                                 )}

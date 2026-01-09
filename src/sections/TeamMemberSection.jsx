@@ -6,7 +6,6 @@ import { teamMembers } from '../data/TeamMembers';
 const TeamMemberSection = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedTeam, setSelectedTeam] = useState("All");
-    const [sortBy, setSortBy] = useState("Name");
     const [resetKey, setResetKey] = useState(0);
 
     const handleCollapseAll = () => {
@@ -39,18 +38,17 @@ const TeamMemberSection = () => {
         return members;
     };
 
-    // Filter Logic for which Dropdowns to show
+    // Filter Logic for which dropdowns to show
     const showProgram = (programName) => {
         if (selectedTeam === "All") return true;
         return selectedTeam === programName;
     };
 
     const categories = ["All", "Leadership", "Programming", "Fund"];
-    const sortOptions = ["Name", "Title", "Major"];
 
     return (
         <div className="container mx-auto px-4 py-12">
-            {/* Page Header */}
+            {/* page header and description*/}
             <div className="mb-12">
                 <h1 className="text-5xl font-bold mb-4 text-[var(--color-nuimpact-dark-blue)]">People</h1>
                 <p className="text-xl text-[var(--color-nuimpact-dark-blue)] max-w-3xl">
@@ -60,7 +58,7 @@ const TeamMemberSection = () => {
 
             <div className="flex flex-col-reverse lg:flex-row gap-8 items-start">
 
-                {/* Left Column: Team Listings */}
+                {/* left side: team dropdowns */}
                 <div className="w-full lg:w-3/4 space-y-4">
 
                     {(() => {
@@ -105,10 +103,10 @@ const TeamMemberSection = () => {
                     })()}
                 </div>
 
-                {/* Right Column: Sidebar (Search & Filters) */}
+                {/* Right side:filter and search bar */}
                 <div className="w-full lg:w-1/4 space-y-8 sticky top-8">
 
-                    {/* Search Bar */}
+                    {/* Search bar */}
                     <div className="relative">
                         <input
                             type="text"
@@ -120,7 +118,7 @@ const TeamMemberSection = () => {
                         <FaSearch className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl" />
                     </div>
 
-                    {/* Search by Team */}
+                    {/* Search by team*/}
                     <div>
                         <h3 className="text-lg font-medium mb-3">Search by team:</h3>
                         <div className="flex flex-col gap-2">
@@ -139,6 +137,7 @@ const TeamMemberSection = () => {
                         </div>
                     </div>
 
+                    {/* collapse all button */}
                     <div className="flex justify-start">
                         <button
                             onClick={handleCollapseAll}

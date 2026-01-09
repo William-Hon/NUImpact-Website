@@ -63,7 +63,7 @@ const OverviewMission = () => {
           </div>
 
           {/* Click to read more hint - visible only when mission is NOT active */}
-          <p className={`text-black underline text-xs md:text-sm font-light tracking-wider mt-4 uppercase cursor-pointer transition-opacity duration-300 ${hoveringMission ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'}`}>
+          <p className={`text-black underline text-xs md:text-sm font-light tracking-wider mt-4 uppercase cursor-pointer transition-opacity duration-300 md:hidden ${hoveringMission ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'}`}>
             ↑ Tap to read more ↑
           </p>
         </div>

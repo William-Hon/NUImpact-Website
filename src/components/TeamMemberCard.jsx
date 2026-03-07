@@ -24,14 +24,14 @@ const TeamMemberCard = ({ member }) => {
         <div className="flex items-center gap-2">
           <h3 className="text-2xl font-bold">{member.name}</h3>
           {member.linkedin && (
-            <Link
-              to={member.linkedin}
+            <a
+              href={member.linkedin.startsWith("http") ? member.linkedin : `https://${member.linkedin}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#0a66c2] hover:opacity-80 transition-opacity"
             >
               <FaLinkedin size={24} />
-            </Link>
+            </a>
           )}
         </div>
         <p className="text-sm text-black">{member.role}</p>

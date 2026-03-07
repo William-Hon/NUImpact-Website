@@ -1,12 +1,74 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import ProgramDropdown from '../components/ProgramDropdown';
-import { teamMembers } from '../data/TeamMembers';
+import { supabase } from '../supabaseClient';
 
 const TeamMemberSection = () => {
+    const [teamMembers, setTeamMembers] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedTeam, setSelectedTeam] = useState("All");
     const [resetKey, setResetKey] = useState(0);
+
+    useEffect(() => {
+        const fetchMembers = async () => {
+            setLoading(true);
+            try {
+                const { data, error } = await supabase
+                    .from('members')
+                    .select('*');
+
+                if (error) throw error;
+
+                if (data) {
+                    const mappedData = data.map(m => {
+                        // Parse team field which might come back as a JSON string
+                        let teamArray = [];
+                        if (typeof m.team === 'string') {
+                            try {
+                                teamArray = JSON.parse(m.team);
+                            } catch (e) {
+                                teamArray = [m.team]; // Fallback if it's just a raw text string
+                            }
+                        } else if (Array.isArray(m.team)) {
+                            teamArray = m.team;
+                        }
+
+                        return {
+                            id: m.name.toLowerCase().replace(/\s+/g, '-'),
+                            name: m.name,
+                            program: teamArray.map(t => t.charAt(0).toUpperCase() + t.slice(1)),
+                            role: m.position,
+                            major: m.major || "",
+                            experience: m.work_experience,
+                            image: m.image_url,
+                            linkedin: m.linkedin_url
+                        };
+                    });
+
+                    // Optional: Sort so leadership is likely on top, or just alphabetize by name
+                    const sortedData = mappedData.sort((a, b) => a.name.localeCompare(b.name));
+                    setTeamMembers(sortedData);
+                }
+            } catch (err) {
+                console.error("Error fetching members:", err.message);
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchMembers();
+    }, []);
+
+    if (error) {
+        return <div className="p-12 text-center text-red-500 font-bold text-2xl">Error Loading Members: {error}</div>;
+    }
+
+    if (loading) {
+        return <div className="p-12 text-center text-xl">Loading Database Members...</div>;
+    }
 
     const handleCollapseAll = () => {
         setSearchQuery("");

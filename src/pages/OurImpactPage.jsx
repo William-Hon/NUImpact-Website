@@ -6,6 +6,13 @@ import ScrollReveal from '../components/ScrollReveal'
 const OurImpactPage = () => {
   const spotlightItems = [
     {
+      image: "/assets/images/nuimpact-irm-presentation.png",
+      title: "IRM Impact Case Study Fall 2025",
+      description: "Take a look into our IRM Impact Case Study for Fall 2025.",
+      buttonText: "Read The Report!",
+      buttonLink: "/assets/pdfs/Fall 2025 IRM Impact Case Study.pdf"
+    },
+    {
       image: "/assets/images/2025-impact-report.png",
       title: "Sector Spotlight Fall 2025",
       description: "Take a look into our Sector Spotlight for Fall 2025.",

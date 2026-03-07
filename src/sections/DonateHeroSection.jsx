@@ -20,9 +20,9 @@ const DonateHeroSection = () => {
                 <ScrollReveal>
                     <div className="flex max-w-lg flex-col items-start text-left text-white">
 
-                        {/* "Create" - Serif Font */}
+                        {/* "Create" - Bold Font */}
                         <h1
-                            className="font-serif text-7xl md:text-8xl leading-none"
+                            className="font-bold text-7xl md:text-8xl leading-none"
                         >
                             Create
                         </h1>
@@ -38,14 +38,14 @@ const DonateHeroSection = () => {
 
                         {/* "IMPACT" - Bold Sans */}
                         <h2
-                            className="text-6xl md:text-7xl font-black tracking-tight uppercase mb-6"
+                            className="text-6xl md:text-7xl font-bold tracking-tight uppercase mb-6"
                         >
                             Impact
                         </h2>
 
                         {/* Description Paragraph */}
                         <p
-                            className="mb-8 text-base md:text-lg font-light leading-relaxed opacity-90"
+                            className="mb-8 text-base md:text-lg font-semibold leading-relaxed opacity-90"
                         >
                             Help Support the Next Generation of Impact Investors Looking to Make a Lasting Impact.
                         </p>

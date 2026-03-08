@@ -168,15 +168,12 @@ const Navbar = ({ logoColor }) => {
                         >
                           FAQ
                         </NavLink>
-                        <NavLink
-                          to="/donate"
-                          className="z-50 block px-6 py-3 text-lg text-black hover:bg-gray-100"
-                        >
-                          Donate
-                        </NavLink>
                       </div>
                     </div>
                   </div>
+                  <NavLink to="/donate" className={({ isActive }) => `px-4 py-2 text-xl font-medium text-white transition hover:opacity-80 ${isActive ? "font-bold" : ""} md:!ml-4`}>
+                    Donate
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -208,8 +205,8 @@ const Navbar = ({ logoColor }) => {
                 <span className="text-white/60 text-sm uppercase tracking-wider">Get Involved</span>
                 <NavLink to="/student-experience" onClick={() => setIsMobileMenuOpen(false)} className="text-xl text-white pl-4">Student Experience</NavLink>
                 <NavLink to="/faq" onClick={() => setIsMobileMenuOpen(false)} className="text-xl text-white pl-4">FAQ</NavLink>
-                <NavLink to="/donate" onClick={() => setIsMobileMenuOpen(false)} className="text-xl text-white pl-4">Donate</NavLink>
               </div>
+              <NavLink to="/donate" onClick={() => setIsMobileMenuOpen(false)} className="text-2xl text-white font-bold border-b border-white/20 pb-2">Donate</NavLink>
             </div>
           </div>
         </div>

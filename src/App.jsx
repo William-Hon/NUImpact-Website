@@ -15,6 +15,7 @@ import OurImpactPage from "./pages/OurImpactPage";
 import StudentExperiencePage from "./pages/StudentExperiencePage";
 import FAQPage from "./pages/FAQPage";
 import DonatePage from "./pages/DonatePage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/student-experience" element={<StudentExperiencePage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/donate" element={<DonatePage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     )
   );

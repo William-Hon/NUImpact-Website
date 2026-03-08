@@ -21,7 +21,7 @@ const OverviewMission = () => {
               <p>
                 NUImpact is Northeastern University’s Impact Investing
                 Initiative, dedicated to promoting the value of purposeful
-                capital on campus and across Boston. NUImpact has 70 members
+                capital on campus and across Boston. NUImpact has 80 members
                 from 5 of the 6 undergraduate colleges.
               </p>
               <p>
@@ -46,6 +46,7 @@ const OverviewMission = () => {
           <div
             onMouseEnter={() => setHoveringMission(true)}
             onMouseLeave={() => setHoveringMission(false)}
+            onClick={() => setHoveringMission(true)}
             className={`w-full bg-[var(--color-nuimpact-light-blue)] p-3 shadow-xl transition-all duration-300 ease-in-out cursor-pointer
               ${hoveringMission ? "scale-100 brightness-100" : "scale-95 brightness-25"}
             `}
@@ -55,8 +56,7 @@ const OverviewMission = () => {
                 Mission
               </h2>
               <p className="text-lg md:text-xl leading-relaxed text-center">
-                We strengthen underserved communities through impact investing and
-                deploying purposeful capital in educational programming.
+                To strengthen underserved communities through the deployment of purposeful capital and create impactful educational programming for Northeastern students.
               </p>
               <div className="h-16 hidden md:block"></div>
             </div>
@@ -64,7 +64,7 @@ const OverviewMission = () => {
 
           {/* Click to read more hint - visible only when mission is NOT active */}
           <p className={`text-black underline text-xs md:text-sm font-light tracking-wider mt-4 uppercase cursor-pointer transition-opacity duration-300 md:hidden ${hoveringMission ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100'}`}>
-            ↑ Tap to read more ↑
+            ↑ Tap here to read more ↑
           </p>
         </div>
       </div>

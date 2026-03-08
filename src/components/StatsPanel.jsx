@@ -13,7 +13,7 @@ const StatsPanel = () => {
             {/* STAT 1 */}
             <div className="flex flex-col gap-2">
               <div className="text-6xl md:text-7xl font-bold text-white">
-                72
+                80
               </div>
               <div className="text-2xl md:text-3xl text-white font-semibold">
                 Active Members

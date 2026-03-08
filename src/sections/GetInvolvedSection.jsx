@@ -20,7 +20,7 @@ const GetInvolvedSection = () => {
         </h1>
         <GetInvolvedPanel
           color="dark-blue"
-          photoURL="/assets/images/entrepreneurs.png"
+          photoURL="/assets/images/student.png"
           text="Looking to get involved? Learn more about our community. Looking for an investment? See if you fit our criteria."
           buttonLink="/investment-thesis" />
       </div>
@@ -30,7 +30,7 @@ const GetInvolvedSection = () => {
         </h1>
         <GetInvolvedPanel
           color="dark-yellow"
-          photoURL="/assets/images/student.png"
+          photoURL="/assets/images/nuimpact-team-alt.png"
           text="Looking to get involved? Learn more about our community."
           buttonLink="/student-experience" />
       </div>

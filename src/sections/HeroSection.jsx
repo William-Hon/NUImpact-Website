@@ -34,7 +34,7 @@ const Hero = ({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className={`flex flex-col space-y-4 max-w-1xl ${isHome ? "mx-auto" : ""}`}
+          className={`flex flex-col space-y-4 ${isHome ? "mx-auto" : "max-w-4xl"}`}
         >
           <h1 className="text-white text-5xl md:text-8xl font-bold">{title}</h1>
           {subtitle && (

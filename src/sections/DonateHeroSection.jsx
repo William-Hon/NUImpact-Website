@@ -11,52 +11,35 @@ const DonateHeroSection = () => {
                     alt="donate image"
                     className="h-full w-full object-cover object-[35%_center] md:object-center"
                 />
-                {/* Dark Gradient Overlay for better text contrast - Stronger on left */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+                {/* Gradient overlay to match other pages */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent"></div>
+                {/* Bottom fade to blend with next section */}
+                <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-black/90 pointer-events-none"></div>
             </div>
 
             {/* Content Container */}
-            <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center justify-start px-6 sm:px-12 lg:px-16">
+            <div className="relative z-10 mx-auto flex h-full pt-[var(--nav-h)] w-full max-w-7xl items-center justify-start px-6 sm:px-12 lg:px-16">
                 <ScrollReveal>
-                    <div className="flex max-w-lg flex-col items-start text-left text-white">
+                    <div className="flex w-full md:max-w-[50vw] flex-col items-start text-left text-white">
 
-                        {/* "Create" - Bold Font */}
-                        <h1
-                            className="font-bold text-7xl md:text-8xl leading-none"
-                        >
-                            Create
+                        {/* Main Text */}
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white leading-tight whitespace-nowrap">
+                            Create a Lasting Impact
                         </h1>
 
-                        {/* Middle "LASTING" */}
-                        <div
-                            className="my-2 flex w-full items-center justify-start gap-4"
-                        >
-                            <span className="text-sm md:text-base font-light tracking-[0.3em] uppercase border-y border-white/50 py-1 px-4">
-                                Lasting
-                            </span>
-                        </div>
-
-                        {/* "IMPACT" - Bold Sans */}
-                        <h2
-                            className="text-6xl md:text-7xl font-bold tracking-tight uppercase mb-6"
-                        >
-                            Impact
+                        {/* Smaller Text */}
+                        <h2 className="text-sm md:text-lg lg:text-xl font-semibold mb-8 text-white leading-snug whitespace-nowrap">
+                            Help support the next generation of impact investors.
                         </h2>
 
-                        {/* Description Paragraph */}
-                        <p
-                            className="mb-8 text-base md:text-lg font-semibold leading-relaxed opacity-90"
-                        >
-                            Help Support the Next Generation of Impact Investors Looking to Make a Lasting Impact.
-                        </p>
-
                         {/* CTA Button */}
-                        <button
-                            className="group relative px-8 py-3 text-sm font-bold tracking-widest uppercase text-white transition-all hover:text-black cursor-pointer"
+                        <a
+                            href="https://give.northeastern.edu/student-opportunities/DN5215-83.html" target="_blank" rel="noopener noreferrer"
+                            className="group relative px-8 py-3 text-sm font-bold tracking-widest uppercase text-white transition-all hover:text-black cursor-pointer inline-block"
                         >
                             <span className="absolute inset-0 border-2 border-white transition-all duration-300 group-hover:bg-white"></span>
-                            <span className="relative">Donate Now</span>
-                        </button>
+                            <span className="relative z-10">Donate Now</span>
+                        </a>
 
                     </div>
                 </ScrollReveal>

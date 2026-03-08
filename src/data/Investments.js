@@ -25,7 +25,8 @@ const investments = [
             websiteLink: "https://eatwellmealkits.com"
         },
         description: [
-            "During Spring 2019, NUImpact officially closed on its first investment of $25,000 in Boston-based company EatWell, which prepares nutritious, affordable, and culturally-appropriate food preparation meal kits for food-insecure families."
+            "During Spring 2019, NUImpact officially closed on its first investment of $25,000 in Boston-based company EatWell, which prepares nutritious, affordable, and culturally-appropriate food preparation meal kits for food-insecure families.",
+            "EatWell is a Boston based company that develops nutritious, affordable, and culturally appropriate meal kits designed to help food insecure families prepare healthy meals at home. The company focuses on improving food access by combining convenient meal preparation with ingredients and recipes tailored to diverse communities."
         ],
         testimonial: {
             quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex",
@@ -60,8 +61,8 @@ const investments = [
             websiteLink: "#"
         },
         description: [
-            "Unicorn was founded with the purpose of ensuring democratized access to high-quality, sustainable, and socially conscious menstrual hygiene products.",
-            "They produce 100% organic tampons and pads that are naturally hypoallergenic. Unicorn products are plant-based, eco-friendly, and free of chemicals and dyes that are both harmful to the environment and to our health."
+            "Unicorn was founded to expand equitable access to high quality menstrual hygiene products by producing sustainable and socially conscious alternatives designed to improve health outcomes while reducing environmental impact.",
+            "Unicorn produces fully organic tampons and pads made from plant based materials that are naturally hypoallergenic. Their products are eco friendly and free from chemicals, dyes, and synthetic additives that can harm both the environment and personal health."
         ],
         testimonial: {
             quote: "Empowering women with sustainable, high-quality menstrual products while fighting period poverty.",
@@ -96,8 +97,8 @@ const investments = [
             websiteLink: "https://itselectric.co"
         },
         description: [
-            "It's Electric is providing curbside charging for electric vehicles in urban areas, solving the problem of charging for those without private driveways.",
-            "Their innovative model partners with property owners to install chargers, creating a decentralized network that enables cleaner transportation in cities."
+            "It’s Electric provides curbside electric vehicle charging infrastructure in dense urban neighborhoods, addressing a major barrier to EV adoption for drivers who lack access to private driveways or home charging options.",
+            "The company partners with property owners to install curbside chargers that connect directly to existing building electricity. This decentralized infrastructure model expands charging access, accelerates electric vehicle adoption, and supports cleaner transportation systems across cities."
         ],
         testimonial: {
             quote: "NUImpact's support was critical in our early stages, providing not just capital but a network of passionate students and experts.",
@@ -132,8 +133,8 @@ const investments = [
             websiteLink: "#"
         },
         description: [
-            "DFC's mission is to create an equitable food system that challenges the traditional food system by building a community and developing a worker-owned asset that nourishes, employs, and reinvests in the local community.",
-            "They emphasize the importance of reinvesting in the local economy by prioritizing employment and supporting local businesses, while also providing quality food for all."
+            "DFC was founded to build a more equitable food system by developing community driven food infrastructure that challenges traditional supply chains while creating worker owned assets that support local economic development.",
+            "The organization focuses on reinvesting resources within the local economy by prioritizing worker ownership, supporting neighborhood businesses, and strengthening food access. Their model creates community wealth while ensuring affordable, high quality food remains available to underserved populations."
         ],
         testimonial: {
             quote: "Building a worker-owned asset that nourishes, employs, and reinvests in the local community.",
@@ -168,8 +169,8 @@ const investments = [
             websiteLink: "#"
         },
         description: [
-            "Imago Rehab is a startup founded by Harvard engineers on a mission to be the next digital health virtual clinic and wearable robotics physical rehab hub.",
-            "Imago Rehab's value proposition is that it solves for travel burdens, lack of frequency, and inefficiencies surrounding ways to monitor patient's adherence to their prescribed physical rehabilitation schedule."
+            "Imago Rehab is a digital health startup founded by Harvard engineers focused on transforming physical rehabilitation through virtual clinical care and wearable robotics that improve accessibility and effectiveness of therapy.",
+            "Their platform addresses key rehabilitation challenges including travel barriers, limited therapy frequency, and difficulty monitoring patient adherence. By combining remote care with wearable technology, Imago enables clinicians to track progress, personalize treatment, and improve rehabilitation outcomes."
         ],
         testimonial: {
             quote: "Providing the most effective post-stroke hand rehab straight from your home through robotics.",
@@ -204,8 +205,8 @@ const investments = [
             websiteLink: "#"
         },
         description: [
-            "AGRI-TRAK is a purpose-driven agricultural technology company transforming how farmers manage their operations through an innovative agriculture platform.",
-            "Their software and data solutions create a comprehensive farm management environment that empowers growers to make data-informed decisions and optimize their yields."
+            "AGRI-TRAK is an agricultural technology company focused on improving how farmers manage operations by delivering integrated digital tools that streamline farm management and enable more efficient data driven agricultural decision making.",
+            "The company provides software and analytics that unify operational data into a comprehensive farm management platform. This system allows growers to monitor performance, optimize resource usage, and make informed decisions that improve productivity, sustainability, and overall crop yields."
         ],
         testimonial: {
             quote: "Redefining what modern farm management looks like and feels like through collaboration.",
@@ -240,8 +241,8 @@ const investments = [
             websiteLink: "#"
         },
         description: [
-            "Volta Health is a purpose-driven healthcare technology company revolutionizing how patients and providers connect via an innovative digital health platform.",
-            "Their software and data solutions create a seamless ecosystem that empowers users to monitor wellness, manage care, and make informed health decisions."
+            "Volta Health is a healthcare technology company developing a digital platform designed to improve how patients and providers connect, manage care, and monitor health outcomes through accessible technology.",
+            "Their platform integrates health data, communication tools, and care management features into a unified ecosystem. By simplifying patient provider interactions and enabling real time health monitoring, Volta empowers users to manage wellness and make more informed healthcare decisions."
         ],
         testimonial: {
             quote: "Revolutionizing how patients and providers connect by advancing accessibility in healthcare.",

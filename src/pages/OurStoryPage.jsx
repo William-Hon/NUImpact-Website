@@ -42,6 +42,14 @@ const OurStoryPage = () => {
       description:
         "The new Portfolio Management team was created in Spring 2023 as a point of contact with NUImpact’s six portfolio companies. The PM team supports portfolio companies with marketing, ad hoc consulting, and corporate / university partnerships."
     },
+    {
+      image: "/assets/images/nuimpact-fund-meeting.png",
+      imagePosition: "object-top",
+      year: "2026",
+      heading: "New Venture Advisory Team",
+      description:
+        "The NUImpact Venture Advisory Program helps early-stage Northeastern student ventures strengthen their materials, improve their pitches, and get ready to talk with real investors. Through workshops, coaching, and access to the NUImpact network, the program raises the investment readiness of impact-focused student founders and supports Northeastern’s growing venture ecosystem."
+    },
   ];
 
   return (

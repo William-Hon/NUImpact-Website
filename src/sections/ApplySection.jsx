@@ -16,10 +16,10 @@ const ApplySection = () => {
                             <div className="w-24 h-1 bg-[var(--color-nuimpact-blue)] mx-auto mb-8"></div>
                             <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-3xl mx-auto">
                                 Interested in making an impact? Applications for the NUImpact Fund and Programming teams open each semester.
-                                Join us in our mission to drive social change through strategic investments and educational initiatives.
+                                Join us in our mission to drive social change through strategic investments and educational initiatives. For any questions please contact <a href="mailto:leadership@nuimpactinvesting.com" className="underline hover:text-[var(--color-nuimpact-blue)]">leadership@nuimpactinvesting.com</a>.
                             </p>
-                            <button className="px-10 py-4 bg-[var(--color-nuimpact-blue)] text-white font-bold text-lg rounded-full hover:scale-105 transition-transform duration-300 shadow-lg uppercase tracking-wide">
-                                Apply Now
+                            <button disabled className="px-10 py-4 bg-gray-400 text-white font-bold text-lg rounded-full cursor-not-allowed shadow-none uppercase tracking-wide">
+                                Applications are currently closed
                             </button>
                         </div>
                     </div>

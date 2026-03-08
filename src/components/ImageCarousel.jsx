@@ -23,33 +23,33 @@ const ImageCarouselSection = ({ slides }) => {
         <img
           src={slides[index].image}
           alt=""
-          className="w-full h-full object-cover"
+          className={`w-full h-full object-cover ${slides[index].imagePosition || "object-center"}`}
         />
 
         {/* TRUE BLUR GRADIENT PANEL */}
         <div
-          className="absolute inset-y-0 left-0 w-full md:w-[75%] z-10 pointer-events-none bg-black/60 md:bg-black/75"
+          className="absolute inset-y-0 left-0 w-full md:w-[80%] z-10 pointer-events-none bg-black/60 md:bg-black/75"
           style={{
             WebkitMaskImage:
-              "linear-gradient(to right, black 0%, black 40%, transparent 100%)",
+              "linear-gradient(to right, black 0%, black 50%, transparent 100%)",
             maskImage:
-              "linear-gradient(to right, black 0%, black 40%, transparent 100%)",
+              "linear-gradient(to right, black 0%, black 50%, transparent 100%)",
           }}
         />
 
 
         {/* TEXT */}
-        <div className="absolute inset-y-0 left-0 md:left-10 w-full md:w-[45%] z-20 p-6 md:p-10 text-white flex items-center md:block">
-          <div className="max-h-full overflow-y-auto pr-2 md:pr-4 pt-4 pb-16 md:pt-0 md:pb-0">
-            <h1 className="text-4xl md:text-6xl font-bold">
+        <div className="absolute inset-y-0 left-0 md:left-10 w-full md:w-[50%] z-20 p-6 md:p-10 text-white flex items-center md:block">
+          <div className="max-h-full overflow-y-auto pr-2 md:pr-4 pt-4 pb-16 md:pt-0 md:pb-0 custom-scrollbar">
+            <h1 className="text-4xl md:text-5xl font-bold">
               {slides[index].year}
             </h1>
 
-            <h2 className="text-xl md:text-3xl mt-1 font-semibold">
+            <h2 className="text-xl md:text-2xl mt-1 font-semibold">
               {slides[index].heading}
             </h2>
 
-            <h3 className="mt-4 md:mt-7 max-w-md text-base md:text-2xl leading-relaxed font-light">
+            <h3 className="mt-3 md:mt-5 max-w-md text-sm md:text-lg leading-relaxed font-light">
               {slides[index].description}
             </h3>
           </div>
@@ -61,8 +61,8 @@ const ImageCarouselSection = ({ slides }) => {
           <button
             onClick={next}
             className="
-                absolute right-4 bottom-4 md:bottom-auto md:right-6 md:top-1/2 md:-translate-y-1/2
-                text-white text-4xl md:text-[80px] font-bold
+                absolute right-6 bottom-4 md:bottom-auto md:right-10 md:top-1/2 md:-translate-y-1/2
+                text-white text-3xl md:text-[50px] font-bold
                 hover:translate-x-1
                 z-30
               "
@@ -76,8 +76,8 @@ const ImageCarouselSection = ({ slides }) => {
           <button
             onClick={prev}
             className="
-                absolute left-4 bottom-4 md:bottom-auto md:left-4 md:top-1/2 md:-translate-y-1/2
-                text-white text-4xl md:text-[80px] font-medium
+                absolute left-6 bottom-4 md:bottom-auto md:left-10 md:top-1/2 md:-translate-y-1/2
+                text-white text-3xl md:text-[50px] font-medium
                 hover:-translate-x-1
                 z-30
               "
@@ -91,8 +91,8 @@ const ImageCarouselSection = ({ slides }) => {
             <button
               onClick={prev}
               className="
-                absolute left-4 bottom-4 md:bottom-auto md:left-4 md:top-1/2 md:-translate-y-1/2
-                text-white text-4xl md:text-[80px] font-medium
+                absolute left-6 bottom-4 md:bottom-auto md:left-10 md:top-1/2 md:-translate-y-1/2
+                text-white text-3xl md:text-[50px] font-medium
                 hover:-translate-x-1
                 z-30
               "
@@ -103,8 +103,8 @@ const ImageCarouselSection = ({ slides }) => {
             <button
               onClick={next}
               className="
-                absolute right-4 bottom-4 md:bottom-auto md:right-4 md:top-1/2 md:-translate-y-1/2
-                text-white text-4xl md:text-[80px] font-medium
+                absolute right-6 bottom-4 md:bottom-auto md:right-10 md:top-1/2 md:-translate-y-1/2
+                text-white text-3xl md:text-[50px] font-medium
                 hover:translate-x-1
                 z-30
               "

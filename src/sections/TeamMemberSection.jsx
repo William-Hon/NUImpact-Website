@@ -47,8 +47,10 @@ const TeamMemberSection = () => {
                         };
                     });
 
-                    // Optional: Sort so leadership is likely on top, or just alphabetize by name
-                    const sortedData = mappedData.sort((a, b) => a.name.localeCompare(b.name));
+                    // Filter out members with no image or the default placeholder, then sort alphabetically by name
+                    const sortedData = mappedData
+                        .filter(m => m.image && m.image.trim() !== "" && !m.image.includes("member-pic-placeholder.png"))
+                        .sort((a, b) => a.name.localeCompare(b.name));
                     setTeamMembers(sortedData);
                 }
             } catch (err) {

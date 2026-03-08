@@ -19,7 +19,7 @@ const PortfolioCard = ({ company }) => {
 
     return (
         <div
-            className="flex flex-col md:flex-row w-full max-w-5xl mx-auto overflow-hidden shadow-lg h-auto md:h-[450px] relative"
+            className="flex flex-col md:flex-row w-full max-w-5xl mx-auto overflow-hidden shadow-lg h-auto md:min-h-[450px] relative"
             style={{ backgroundColor }}
         >
             {/* Inset Border (Black for light cards, White for dark cards) */}
@@ -77,38 +77,15 @@ const PortfolioCard = ({ company }) => {
                 </div>
             </div>
 
-            {/* Right Column: Description & Testimonial */}
-            <div className="flex-[1.2] p-6 md:p-10 flex flex-col overflow-hidden">
-                <div className="flex-[6] overflow-y-auto pr-1 custom-scrollbar mb-0 md:mb-6 max-h-[50px] md:max-h-none">
-                    <div className="space-y-1 md:space-y-4">
+            {/* Right Column: Description */}
+            <div className="flex-[1.2] p-6 md:p-10 flex flex-col justify-start">
+                <div className="w-full">
+                    <div className="space-y-3 md:space-y-4">
                         {description.map((para, i) => (
-                            <p key={i} className="text-[10px] md:text-lg leading-relaxed" style={{ color: regularTextColor }}>
+                            <p key={i} className="text-sm md:text-lg leading-relaxed" style={{ color: regularTextColor }}>
                                 {para}
                             </p>
                         ))}
-                    </div>
-                </div>
-
-                {/* Testimonial - HIDDEN ON MOBILE to save space */}
-                <div className="hidden md:flex flex-[4] flex-col justify-end pt-6 border-t border-black/10">
-                    <div className="flex items-start gap-4">
-                        <img
-                            src={testimonial.avatar}
-                            alt={testimonial.author}
-                            className="w-16 h-16 rounded-full object-cover shadow-md border-2 border-white/50"
-                        />
-                        <div className="flex-1">
-                            <div className="flex gap-2 text-2xl mb-1 opacity-80 leading-none" style={{ color: regularTextColor }}>
-                                <span>"</span>
-                            </div>
-                            <p className="text-base italic leading-snug mb-3" style={{ color: regularTextColor }}>
-                                {testimonial.quote}
-                            </p>
-                            <div>
-                                <div className="text-lg font-bold" style={{ color: headerColor }}>{testimonial.author}</div>
-                                <div className="text-base opacity-80" style={{ color: headerColor }}>{testimonial.role}</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

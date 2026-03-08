@@ -171,7 +171,7 @@ const Navbar = ({ logoColor }) => {
                       </div>
                     </div>
                   </div>
-                  <NavLink to="/donate" className={({ isActive }) => `px-4 py-2 text-xl font-medium text-white transition hover:opacity-80 ${isActive ? "font-bold" : ""} md:!ml-4`}>
+                  <NavLink to="/donate" className={({ isActive }) => `px-4 py-2 text-xl font-medium text-white transition hover:opacity-80 ${isActive ? "font-bold" : ""} md:!ml-0`}>
                     Donate
                   </NavLink>
                 </div>

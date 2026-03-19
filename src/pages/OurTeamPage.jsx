@@ -2,7 +2,6 @@ import React from 'react'
 import HeroSection from '../sections/HeroSection'
 import Footer from '../sections/Footer'
 import TeamMemberSection from '../sections/TeamMemberSection'
-import TeamUnderConstruction from '../sections/TeamUnderConstruction'
 import ScrollReveal from '../components/ScrollReveal'
 
 const OurTeamPage = () => (
@@ -20,8 +19,7 @@ const OurTeamPage = () => (
         backgroundImage="/assets/images/nuimpact-our-team.png"
         variant="page" />
       <ScrollReveal>
-        <TeamUnderConstruction />
-        {/* <TeamMemberSection /> */}
+        <TeamMemberSection />
       </ScrollReveal>
       <Footer />
     </div>

@@ -47,10 +47,25 @@ const TeamMemberSection = () => {
                         };
                     });
 
-                    // Filter out members with no image or the default placeholder, then sort alphabetically by name
+                    // Filter out members with no image or the default placeholder, then sort by leadership role rank first, then alphabetically by name
+                    const getRoleRank = (role) => {
+                        if (!role) return 3;
+                        const lowerRole = role.toLowerCase();
+                        if (lowerRole.includes("president")) return 1;
+                        if (lowerRole.includes("director")) return 2;
+                        return 3;
+                    };
+
                     const sortedData = mappedData
-                        .filter(m => m.image && m.image.trim() !== "" && !m.image.includes("member-pic-placeholder.png"))
-                        .sort((a, b) => a.name.localeCompare(b.name));
+                        .filter(m => m.image && m.image.trim() !== "" && !m.image.includes("member-pic-placeholder.png") && m.major && m.major.trim() !== "")
+                        .sort((a, b) => {
+                            const aRank = getRoleRank(a.role);
+                            const bRank = getRoleRank(b.role);
+
+                            if (aRank !== bRank) return aRank - bRank;
+
+                            return a.name.localeCompare(b.name);
+                        });
                     setTeamMembers(sortedData);
                 }
             } catch (err) {

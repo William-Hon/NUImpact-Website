@@ -21,6 +21,6 @@ export const summitFaqs = [
     },
     {
         question: "Who should I contact if I have any questions or if I can't go anymore?",
-        answer: "Please contact NUImpact at nu.impact.investing@gmail.com and someone from our team will get back to you."
+        answer: "Please contact NUImpact at nuimpactconference@gmail.com and someone from our team will get back to you."
     }
 ];

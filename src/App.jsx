@@ -1,6 +1,6 @@
 import {
   Route,
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
@@ -19,7 +19,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 
 const App = () => {
-  const router = createBrowserRouter(
+  const router = createHashRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />

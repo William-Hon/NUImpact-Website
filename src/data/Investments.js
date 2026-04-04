@@ -57,8 +57,8 @@ const investments = [
             checkSize: "$25,000",
             vehicle: "Convertible Note",
             vertical: "Healthcare",
-            website: "unicorn.com",
-            websiteLink: "#"
+            website: "everystall.com",
+            websiteLink: "https://www.everystall.com/"
         },
         description: [
             "Unicorn was founded to expand equitable access to high quality menstrual hygiene products by producing sustainable and socially conscious alternatives designed to improve health outcomes while reducing environmental impact.",
@@ -93,8 +93,8 @@ const investments = [
             checkSize: "$30,000",
             vehicle: "Equity",
             vertical: "Transportation",
-            website: "itselectric.co",
-            websiteLink: "https://itselectric.co"
+            website: "itselectric.us",
+            websiteLink: "https://itselectric.us/"
         },
         description: [
             "It’s Electric provides curbside electric vehicle charging infrastructure in dense urban neighborhoods, addressing a major barrier to EV adoption for drivers who lack access to private driveways or home charging options.",
@@ -130,7 +130,7 @@ const investments = [
             vehicle: "Crowdfund Investment",
             vertical: "Food & Agriculture",
             website: "dorchesterfoodcoop.com",
-            websiteLink: "#"
+            websiteLink: "https://www.dorchesterfoodcoop.com/"
         },
         description: [
             "DFC was founded to build a more equitable food system by developing community driven food infrastructure that challenges traditional supply chains while creating worker owned assets that support local economic development.",
@@ -166,7 +166,7 @@ const investments = [
             vehicle: "Preferred Shares",
             vertical: "Healthcare",
             website: "imagorehab.com",
-            websiteLink: "#"
+            websiteLink: "https://imagorehab.com/"
         },
         description: [
             "Imago Rehab is a digital health startup founded by Harvard engineers focused on transforming physical rehabilitation through virtual clinical care and wearable robotics that improve accessibility and effectiveness of therapy.",
@@ -201,8 +201,8 @@ const investments = [
             checkSize: "$30,000",
             vehicle: "Straight Loan",
             vertical: "Technology & Financial Services",
-            website: "agritrak.com",
-            websiteLink: "#"
+            website: "agri-trak.com",
+            websiteLink: "https://www.agri-trak.com/"
         },
         description: [
             "AGRI-TRAK is an agricultural technology company focused on improving how farmers manage operations by delivering integrated digital tools that streamline farm management and enable more efficient data driven agricultural decision making.",
@@ -237,15 +237,15 @@ const investments = [
             checkSize: "$30,000",
             vehicle: "Straight Loan",
             vertical: "Education & Media",
-            website: "voltahealth.com",
-            websiteLink: "#"
+            website: "volta.health",
+            websiteLink: "https://volta.health/"
         },
         description: [
             "Volta Health is a healthcare technology company developing a digital platform designed to improve how patients and providers connect, manage care, and monitor health outcomes through accessible technology.",
             "Their platform integrates health data, communication tools, and care management features into a unified ecosystem. By simplifying patient provider interactions and enabling real time health monitoring, Volta empowers users to manage wellness and make more informed healthcare decisions."
         ],
         testimonial: {
-            quote: "Revolutionizing how patients and providers connect by advancing accessibility in healthcare.",
+            quote: "From the very first conversation through the final diligence process with the Investment Committee, the NUImpact team has been thorough, thoughtful, and incredibly professional. What stood out most was how student-led the process felt while still maintaining the rigor you'd expect from any institutional investor. The questions your team asked during diligence pushed us to think more clearly about our business model, our go-to-market strategy, and our long-term vision for Volta.\n\nBeyond the capital itself, NUImpact's investment gave us credibility as we continued conversations with other investors and university partners. Being able to say we were backed by Northeastern's impact investing fund carried real weight, especially given how closely our mission aligns with the student health space.\n\nI'm thankful for the partnership and excited to continue building Volta with NUImpact's support.",
             author: "Dr. Tsikata Apenyo",
             role: "CEO / Volta Health",
             avatar: "/assets/images/portfolio-images/tsikata-apenyo.jpg"

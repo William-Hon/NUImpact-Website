@@ -62,6 +62,27 @@ const PortfolioSlider = ({ investments }) => {
                 <div className="flex-grow max-w-5xl relative z-10 transition-all duration-500 ease-in-out">
                     <PortfolioCard company={currentCompany} />
 
+                    {/* Volta Health Quote */}
+                    {currentCompany.name === "Volta Health" && currentCompany.testimonial && (
+                        <div className="mt-8 mx-auto px-6 md:px-12 w-full max-w-5xl">
+                            <div className="relative bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-xl shadow-sm border border-black/5">
+                                <span className="absolute top-2 left-4 text-6xl text-[var(--color-nuimpact-blue)] opacity-20 font-serif leading-none">"</span>
+                                <div className="text-sm md:text-base italic text-gray-800 whitespace-pre-wrap relative z-10 pl-6 space-y-4">
+                                    {currentCompany.testimonial.quote}
+                                </div>
+                                <div className="mt-4 pl-6 text-sm font-bold text-gray-900 flex items-center gap-3">
+                                    {currentCompany.testimonial.avatar && (
+                                        <img src={currentCompany.testimonial.avatar} alt={currentCompany.testimonial.author} className="w-10 h-10 rounded-full object-cover border-2 border-[var(--color-nuimpact-blue)]" />
+                                    )}
+                                    <div>
+                                        <div>{currentCompany.testimonial.author}</div>
+                                        <div className="font-normal text-xs text-gray-600">{currentCompany.testimonial.role}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
                     {/* Dots indicator */}
                     <div className="flex justify-center gap-3 mt-12">
                         {showcaseItems.map((_, i) => (

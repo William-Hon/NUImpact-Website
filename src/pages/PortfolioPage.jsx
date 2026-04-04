@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroSection from '../sections/HeroSection'
+import PressReleaseSection from '../sections/PressReleaseSection'
 import InvestmentTimelineSection from '../sections/InvestmentTimelineSection'
 import PortfolioSlider from '../sections/PortfolioSlider'
 import investments from '../data/Investments'
@@ -14,6 +15,7 @@ const PortfolioPage = () => {
         subtitle="Backing ideas that matter."
         backgroundImage="/assets/images/judges.png"
         variant="page" />
+      <PressReleaseSection />
       <InvestmentTimelineSection investments={investments} />
       <ScrollReveal>
         <PortfolioSlider investments={investments} />

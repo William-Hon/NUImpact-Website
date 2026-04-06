@@ -28,7 +28,7 @@ const PressReleaseSection = () => {
           {/* Body Text */}
           <div className="relative border-l-4 border-[var(--color-nuimpact-blue)] pl-6 space-y-4">
             <p className="text-xl text-black font-medium leading-relaxed">
-              Boston, Massachusetts, March 2026 - NUImpact, Northeastern University’s premier impact venture capital fund, has backed LymeAlert, a healthtech startup developing rapid at-home tick testing technology, as part of its $2.5M financing led by Bay Area Lyme Ventures.
+              Boston, Massachusetts, March 2026 - NUImpact, Northeastern University’s premier impact venture capital fund, has backed LymeAlert, a healthtech startup developing rapid at-home Borrelia Burgdorferi testing technology, as part of its $2.5M financing led by Bay Area Lyme Ventures.
             </p>
             <p className="text-lg text-black leading-relaxed">
               LymeAlert seeks to improve early awareness and action around Lyme exposure with an at-home Borrelia Burgdorferi testing kit. This investment marks NUImpact’s third investment within the healthcare vertical and illustrates strong alignment with NUImpact’s mission of strategic capital deployment to mission-driven companies.
@@ -38,7 +38,7 @@ const PressReleaseSection = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-5 pt-4">
             <a 
-              href="/assets/pdfs/LymeAlert%20Press%20Release%20-%20March%202026%20(1).pdf" 
+              href="/assets/pdfs/NUImpact%20LymeAlert%20PressRelease.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group flex flex-1 items-center justify-center gap-3 bg-[var(--color-nuimpact-blue)] text-white px-8 py-4 font-bold text-lg hover:bg-[var(--color-nuimpact-dark-blue)] transition-all shadow-md hover:shadow-xl"

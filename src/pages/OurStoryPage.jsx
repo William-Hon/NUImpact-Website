@@ -2,6 +2,7 @@ import React from 'react'
 import HeroSection from '../sections/HeroSection.jsx'
 import ImageCarouselSection from '../components/ImageCarousel.jsx'
 import OurValuesSection from '../sections/OurValuesSection.jsx'
+import FoundersPreviewSection from '../sections/FoundersPreviewSection.jsx'
 import Footer from '../sections/Footer.jsx'
 import ScrollReveal from '../components/ScrollReveal.jsx'
 const OurStoryPage = () => {
@@ -71,6 +72,9 @@ const OurStoryPage = () => {
           <ImageCarouselSection
             slides={slides}
           />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FoundersPreviewSection />
         </ScrollReveal>
         <ScrollReveal>
           <OurValuesSection />

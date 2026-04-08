@@ -19,7 +19,7 @@ const InvestmentThesisPage = () => {
         <HeroSection
           title="Investment Thesis"
           subtitle="Our framework for backing impact."
-          backgroundImage="/assets/images/nuimpact-irm-presentation-alt.png"
+          backgroundImage="/assets/images/investment-thesis-hero.jpg"
           variant="page"
         />
 

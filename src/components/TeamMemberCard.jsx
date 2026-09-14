@@ -36,7 +36,9 @@ const TeamMemberCard = ({ member }) => {
         </div>
         <p className="text-sm text-black">{member.role}</p>
 
-        <p className="mt-3 text-md text-black"><span className="font-bold">Major:</span> {member.major}</p>
+        {member.major && member.major.trim() !== "" && (
+          <p className="mt-3 text-md text-black"><span className="font-bold">Major:</span> {member.major}</p>
+        )}
 
         {member.experience && member.experience.trim() !== "" && (
           <p className="mt-3 text-md text-black">

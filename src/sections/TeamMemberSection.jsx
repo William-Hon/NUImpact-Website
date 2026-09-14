@@ -57,7 +57,7 @@ const TeamMemberSection = () => {
                     };
 
                     const sortedData = mappedData
-                        .filter(m => m.image && m.image.trim() !== "" && !m.image.includes("member-pic-placeholder.png") && m.major && m.major.trim() !== "")
+                        .filter(m => m.image && m.image.trim() !== "" && !m.image.includes("member-pic-placeholder.png"))
                         .sort((a, b) => {
                             const aRank = getRoleRank(a.role);
                             const bRank = getRoleRank(b.role);

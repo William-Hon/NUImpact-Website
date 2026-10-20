@@ -3,12 +3,19 @@ import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const TeamMemberCard = ({ member }) => {
+  const hasValidLinkedin = Boolean(
+    member.linkedin &&
+    typeof member.linkedin === "string" &&
+    member.linkedin.trim() !== "" &&
+    (member.linkedin.includes("linkedin.com") || member.linkedin.startsWith("http"))
+  );
+
   return (
     <div className="h-full flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white">
       {/* Image */}
       <div className="h-96 w-full overflow-hidden flex-shrink-0 relative bg-gray-200">
         <img
-          src={member.image}
+          src={member.image ? encodeURI(member.image) : ""}
           alt={member.name}
           className="h-full w-full object-cover"
           onError={(e) => {
@@ -21,14 +28,15 @@ const TeamMemberCard = ({ member }) => {
 
       {/* Content */}
       <div className="p-4 bg-white flex-grow flex flex-col">
-        <div className="flex items-center gap-2">
-          <h3 className="text-2xl font-bold">{member.name}</h3>
-          {member.linkedin && (
+        <div className="flex items-center justify-between gap-2">
+          <h3 className="text-2xl font-bold break-words min-w-0 flex-1">{member.name}</h3>
+          {hasValidLinkedin && (
             <a
               href={member.linkedin.startsWith("http") ? member.linkedin : `https://${member.linkedin}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#0a66c2] hover:opacity-80 transition-opacity"
+              aria-label={`${member.name}'s LinkedIn`}
+              className="text-[#0a66c2] hover:opacity-80 transition-opacity flex-shrink-0"
             >
               <FaLinkedin size={24} />
             </a>

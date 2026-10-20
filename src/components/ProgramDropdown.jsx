@@ -11,7 +11,8 @@ const ProgramDropdown = ({ program, members, isOpen }) => {
     const colors = {
         "Leadership": "var(--color-nuimpact-dark-blue)",
         "Programming": "var(--color-nuimpact-blue)",
-        "Fund": "var(--color-nuimpact-light-blue)"
+        "Fund": "var(--color-nuimpact-light-blue)",
+        "Venture": "var(--color-nuimpact-darker-blue)"
     };
 
     return (
@@ -31,15 +32,21 @@ const ProgramDropdown = ({ program, members, isOpen }) => {
             {/* CONTENT */}
             {open && (
                 <div
-                    className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6 pt-0"
+                    className="p-6 pt-0"
                     style={{ backgroundColor: colors[program] || "var(--color-nuimpact-blue)" }}
                 >
-                    {members.map((member) => (
-                        <TeamMemberCard
-                            key={member.id}
-                            member={member}
-                        />
-                    ))}
+                    {members && members.length > 0 ? (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                            {members.map((member) => (
+                                <TeamMemberCard
+                                    key={member.id}
+                                    member={member}
+                                />
+                            ))}
+                        </div>
+                    ) : (
+                        <p className="text-white/80 italic py-4">No team members to display.</p>
+                    )}
                 </div>
             )}
         </div>

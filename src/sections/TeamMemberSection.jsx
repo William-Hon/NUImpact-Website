@@ -35,29 +35,53 @@ const TeamMemberSection = () => {
                             teamArray = m.team;
                         }
 
+                        const safeName = (m.name || "").trim();
+
                         return {
-                            id: m.name.toLowerCase().replace(/\s+/g, '-'),
-                            name: m.name,
-                            program: teamArray.map(t => t.charAt(0).toUpperCase() + t.slice(1)),
-                            role: m.position,
+                            id: m.id || (safeName ? safeName.toLowerCase().replace(/\s+/g, '-') : Math.random().toString()),
+                            name: safeName,
+                            program: teamArray
+                                .filter(t => typeof t === 'string' && t.trim().length > 0)
+                                .map(t => t.trim().charAt(0).toUpperCase() + t.trim().slice(1)),
+                            role: (m.position || "").trim(),
                             major: m.major || "",
-                            experience: m.work_experience,
-                            image: m.image_url,
-                            linkedin: m.linkedin_url
+                            experience: m.work_experience || "",
+                            image: m.image_url || "",
+                            linkedin: m.linkedin_url || ""
                         };
                     });
 
-                    // Filter out members with no image or the default placeholder, then sort by leadership role rank first, then alphabetically by name
+                    // Sort by role hierarchy first, then alphabetically by name
+                    // Hierarchy: Presidents -> Directors -> Advisors / Senior Advisors -> Seniors / Advisors -> Juniors -> Other
                     const getRoleRank = (role) => {
-                        if (!role) return 3;
-                        const lowerRole = role.toLowerCase();
+                        if (!role) return 6;
+                        const lowerRole = role.toLowerCase().trim();
+
+                        // 1. Presidents
                         if (lowerRole.includes("president")) return 1;
+
+                        // 2. Directors
                         if (lowerRole.includes("director")) return 2;
-                        return 3;
+
+                        // 3. Senior Advisors & Standalone Executive Advisors (e.g. "Advisor", "Senior Venture Advisor")
+                        if (lowerRole === "advisor" || (lowerRole.includes("senior") && lowerRole.includes("advisor"))) {
+                            return 3;
+                        }
+
+                        // 4. Seniors (e.g. "Senior Analyst", "Senior BDA") & Standard Advisors (e.g. "Venture Advisor")
+                        if (lowerRole.includes("senior") || lowerRole.includes("advisor")) {
+                            return 4;
+                        }
+
+                        // 5. Juniors (e.g. "Junior Analyst")
+                        if (lowerRole.includes("junior")) return 5;
+
+                        // 6. All other roles (Associates, Analysts, Portfolio Management, etc.)
+                        return 6;
                     };
 
                     const sortedData = mappedData
-                        .filter(m => m.image && m.image.trim() !== "" && !m.image.includes("member-pic-placeholder.png"))
+                        .filter(m => m.name && m.image && m.image.trim() !== "" && !m.image.includes("member-pic-placeholder.png"))
                         .sort((a, b) => {
                             const aRank = getRoleRank(a.role);
                             const bRank = getRoleRank(b.role);
@@ -103,16 +127,14 @@ const TeamMemberSection = () => {
         });
 
         // Search Filter
-        if (searchQuery) {
-            const lowerQuery = searchQuery.toLowerCase();
+        const trimmedQuery = searchQuery.trim().toLowerCase();
+        if (trimmedQuery) {
             members = members.filter(member =>
-                member.name.toLowerCase().includes(lowerQuery) ||
-                (member.role && member.role.toLowerCase().includes(lowerQuery)) ||
-                (member.major && member.major.toLowerCase().includes(lowerQuery))
+                (member.name && member.name.toLowerCase().includes(trimmedQuery)) ||
+                (member.role && member.role.toLowerCase().includes(trimmedQuery)) ||
+                (member.major && member.major.toLowerCase().includes(trimmedQuery))
             );
         }
-
-
 
         return members;
     };
@@ -123,7 +145,7 @@ const TeamMemberSection = () => {
         return selectedTeam === programName;
     };
 
-    const categories = ["All", "Leadership", "Programming", "Fund"];
+    const categories = ["All", "Leadership", "Programming", "Fund", "Venture"];
 
     return (
         <div className="container mx-auto px-4 py-12">
@@ -144,6 +166,7 @@ const TeamMemberSection = () => {
                         const leadershipMembers = getMembersByProgram("Leadership");
                         const fundMembers = getMembersByProgram("Fund");
                         const programmingMembers = getMembersByProgram("Programming");
+                        const ventureMembers = getMembersByProgram("Venture");
 
                         const shouldOpen = (programName, members) => {
                             if (selectedTeam === programName) return true;
@@ -177,13 +200,21 @@ const TeamMemberSection = () => {
                                         isOpen={shouldOpen("Fund", fundMembers)}
                                     />
                                 )}
+                                {showProgram("Venture") && (
+                                    <ProgramDropdown
+                                        key={`venture-${resetKey}`}
+                                        program="Venture"
+                                        members={ventureMembers}
+                                        isOpen={shouldOpen("Venture", ventureMembers)}
+                                    />
+                                )}
                             </>
                         );
                     })()}
                 </div>
 
                 {/* Right side:filter and search bar */}
-                <div className="w-full lg:w-1/4 space-y-8 sticky top-8">
+                <div className="w-full lg:w-1/4 space-y-8 lg:sticky lg:top-28">
 
                     {/* Search bar */}
                     <div className="relative">

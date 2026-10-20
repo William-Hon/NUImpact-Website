@@ -3,7 +3,7 @@ import pandas as pd
 import re
 from supabase import create_client
 from dotenv import load_dotenv
-from tkinter import Tk
+from tkinter import Tk, messagebox
 from tkinter.filedialog import askopenfilename
 
 
@@ -179,10 +179,57 @@ if not members:
     exit()
 
 
-# Upsert using name conflict rule
+# ---------- 1. UPSERT SPREADSHEET MEMBERS ----------
 response = supabase.table("members").upsert(
     members,
     on_conflict="name"
 ).execute()
 
-print(f"{len(members)} members synced successfully.")
+print(f"✓ {len(members)} member(s) synced successfully.")
+
+# ---------- 2. RECONCILE & PRUNE STALE MEMBERS ----------
+print("\nChecking for stale members in Supabase...")
+current_names = {m["name"].strip().lower() for m in members}
+
+# Fetch all existing members from database
+db_records = supabase.table("members").select("id, name").execute().data or []
+
+# Identify members in the database who are absent from the spreadsheet
+stale_members = [
+    row for row in db_records 
+    if row.get("name") and row["name"].strip().lower() not in current_names
+]
+
+if stale_members:
+    print(f"\n⚠️  Found {len(stale_members)} old member(s) in database not present in current spreadsheet:")
+    for sm in stale_members:
+        print(f"   - {sm['name']}")
+
+    # Create readable preview for the confirmation prompt
+    names_preview = "\n".join(f"• {sm['name']}" for sm in stale_members[:12])
+    if len(stale_members) > 12:
+        names_preview += f"\n...and {len(stale_members) - 12} more"
+
+    delete_confirmed = False
+    try:
+        delete_confirmed = messagebox.askyesno(
+            "Remove Old Members?",
+            f"Found {len(stale_members)} member(s) in the database who are NOT in your spreadsheet:\n\n"
+            f"{names_preview}\n\n"
+            f"Would you like to delete them from the website?"
+        )
+    except Exception:
+        cli_input = input(f"\nDelete these {len(stale_members)} old member(s)? (y/n): ").strip().lower()
+        delete_confirmed = cli_input in ["y", "yes"]
+
+    if delete_confirmed:
+        stale_ids = [sm["id"] for sm in stale_members]
+        # Delete in batches of 50 to avoid request URL length limits
+        for i in range(0, len(stale_ids), 50):
+            batch = stale_ids[i:i + 50]
+            supabase.table("members").delete().in_("id", batch).execute()
+        print(f"✓ Successfully deleted {len(stale_ids)} old member(s) from Supabase.")
+    else:
+        print("Skipped deletion. Old members were retained in the database.")
+else:
+    print("✓ Database is completely in sync with the spreadsheet. No stale members found.")
